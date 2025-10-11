@@ -247,12 +247,15 @@ body {
 
 .programs-section {
   margin-top: 40px;
+  padding: 0 24px;
+  padding-left: 0;
 }
 
 .programs-section h2 {
   color: #423243;
   font-size: 22px;
   margin-bottom: 20px;
+  padding-left: 20px;
 }
 
 .programs-table {
@@ -1364,11 +1367,11 @@ body {
 }
 
 .table-header.users-header {
-  grid-template-columns: 2fr 2fr 1fr 1.5fr 0.8fr 1.3fr 1.2fr;
+  grid-template-columns: 2fr 2fr 1fr 1.5fr 0.8fr 1.3fr 1.2fr 1.2fr;
 }
 
 .table-row.users-row {
-  grid-template-columns: 2fr 2fr 1fr 1.5fr 0.8fr 1.3fr 1.2fr;
+  grid-template-columns: 2fr 2fr 1fr 1.5fr 0.8fr 1.3fr 1.2fr 1.2fr;
 }
 
 .user-avatar-small {
@@ -1611,17 +1614,19 @@ body {
 .section-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 20px;
 }
 
 .section-header h2 {
   margin: 0;
+  padding-top: 20px;
 }
 
 .bulk-actions {
   display: flex;
   gap: 12px;
+  margin-bottom: 60px;
 }
 
 .bulk-action-btn {
@@ -1662,11 +1667,11 @@ body {
 
 /* Table with Checkboxes and Actions */
 .table-header.songs-header-new {
-  grid-template-columns: 40px 2.5fr 1fr 1.2fr 2fr 150px;
+  grid-template-columns: 30px 2.5fr 1fr 1.2fr 2fr 150px !important;
 }
 
 .table-row.songs-row-new {
-  grid-template-columns: 40px 2.5fr 1fr 1.2fr 2fr 150px;
+  grid-template-columns: 30px 2.5fr 1fr 1.2fr 2fr 150px !important;
   cursor: default;
   overflow: visible;
 }
@@ -1942,12 +1947,14 @@ body {
   cursor: pointer;
 }
 
-/* General tooltip styles for all elements with title attribute in tables */
-.programs-table [title] {
+/* General tooltip styles for all elements with title attribute in tables and bulk actions */
+.programs-table [title],
+.programs-section .bulk-actions [title] {
   position: relative;
 }
 
-.programs-table [title]:hover::before {
+.programs-table [title]:hover::before,
+.programs-section .bulk-actions [title]:hover::before {
   content: attr(title);
   position: absolute;
   bottom: 100%;
@@ -1966,7 +1973,8 @@ body {
   animation: tooltipFadeIn 0.2s ease forwards;
 }
 
-.programs-table [title]:hover::after {
+.programs-table [title]:hover::after,
+.programs-section .bulk-actions [title]:hover::after {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -2026,41 +2034,7 @@ body {
   }
 }
 
-/* Bulk action buttons tooltips */
+/* Bulk action buttons */
 .bulk-action-btn {
   position: relative;
-}
-
-.bulk-action-btn[title]:hover::before {
-  content: attr(title);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 6px 10px;
-  background: #2d1f2e;
-  color: #fff8f0;
-  border-radius: 6px;
-  font-size: 12px;
-  white-space: nowrap;
-  margin-bottom: 8px;
-  z-index: 1000;
-  pointer-events: none;
-  opacity: 0;
-  animation: tooltipFadeIn 0.2s ease forwards;
-}
-
-.bulk-action-btn[title]:hover::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 2px;
-  border: 6px solid transparent;
-  border-top-color: #2d1f2e;
-  z-index: 1000;
-  pointer-events: none;
-  opacity: 0;
-  animation: tooltipFadeIn 0.2s ease forwards;
 }
