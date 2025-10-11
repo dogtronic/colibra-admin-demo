@@ -377,7 +377,11 @@
         <h2>Lista użytkowników</h2>
         <div class="programs-table">
           <div class="table-header users-header">
-            <div class="table-cell sortable" data-sort="user" title="Kliknij aby sortować według imienia i nazwiska">
+            <div
+              class="table-cell sortable"
+              data-sort="user"
+              title="Kliknij aby sortować według imienia i nazwiska"
+            >
               <span>Użytkownik</span>
               <svg
                 class="sort-icon"
@@ -389,7 +393,11 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell sortable" data-sort="email" title="Kliknij aby sortować według adresu email">
+            <div
+              class="table-cell sortable"
+              data-sort="email"
+              title="Kliknij aby sortować według adresu email"
+            >
               <span>Email</span>
               <svg
                 class="sort-icon"
@@ -401,7 +409,11 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell sortable" data-sort="gender" title="Kliknij aby sortować według płci">
+            <div
+              class="table-cell sortable"
+              data-sort="gender"
+              title="Kliknij aby sortować według płci"
+            >
               <span>Płeć</span>
               <svg
                 class="sort-icon"
@@ -413,7 +425,11 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell sortable" data-sort="narrator" title="Kliknij aby sortować według wybranego narratora">
+            <div
+              class="table-cell sortable"
+              data-sort="narrator"
+              title="Kliknij aby sortować według wybranego narratora"
+            >
               <span>Narrator</span>
               <svg
                 class="sort-icon"
@@ -425,7 +441,11 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell sortable" data-sort="goals" title="Kliknij aby sortować według liczby celów">
+            <div
+              class="table-cell sortable"
+              data-sort="goals"
+              title="Kliknij aby sortować według liczby celów"
+            >
               <span>Cele</span>
               <svg
                 class="sort-icon"
@@ -437,7 +457,11 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell sortable" data-sort="programs" title="Kliknij aby sortować według zakupionych programów">
+            <div
+              class="table-cell sortable"
+              data-sort="programs"
+              title="Kliknij aby sortować według zakupionych programów"
+            >
               <span>Zakupione programy</span>
               <svg
                 class="sort-icon"
@@ -449,7 +473,11 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell sortable" data-sort="date" title="Kliknij aby sortować według daty rejestracji">
+            <div
+              class="table-cell sortable"
+              data-sort="date"
+              title="Kliknij aby sortować według daty rejestracji"
+            >
               <span>Data rejestracji</span>
               <svg
                 class="sort-icon"
@@ -461,9 +489,12 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
+            <div class="table-cell">
+              <span>Akcje</span>
+            </div>
           </div>
 
-          <a href="user-details.html" class="table-row users-row">
+          <div class="table-row users-row">
             <div class="table-cell">
               <div class="program-info">
                 <div class="user-avatar-small">👤</div>
@@ -478,9 +509,40 @@
             <div class="table-cell">3</div>
             <div class="table-cell">3 (249 zł)</div>
             <div class="table-cell">2024-01-15</div>
-          </a>
 
-          <a href="user-details.html" class="table-row users-row">
+            <div class="table-cell actions-cell">
+              <a
+                href="user-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </a>
+              <button class="action-btn delete-btn" title="Usuń">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="table-row users-row">
             <div class="table-cell">
               <div class="program-info">
                 <div class="user-avatar-small">👤</div>
@@ -495,9 +557,40 @@
             <div class="table-cell">2</div>
             <div class="table-cell">1 (99 zł)</div>
             <div class="table-cell">2024-02-20</div>
-          </a>
 
-          <a href="user-details.html" class="table-row users-row">
+            <div class="table-cell actions-cell">
+              <a
+                href="user-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </a>
+              <button class="action-btn delete-btn" title="Usuń">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="table-row users-row">
             <div class="table-cell">
               <div class="program-info">
                 <div class="user-avatar-small">👤</div>
@@ -512,9 +605,40 @@
             <div class="table-cell">4</div>
             <div class="table-cell">5 (449 zł)</div>
             <div class="table-cell">2024-03-10</div>
-          </a>
 
-          <a href="user-details.html" class="table-row users-row">
+            <div class="table-cell actions-cell">
+              <a
+                href="user-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </a>
+              <button class="action-btn delete-btn" title="Usuń">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="table-row users-row">
             <div class="table-cell">
               <div class="program-info">
                 <div class="user-avatar-small">👤</div>
@@ -529,9 +653,40 @@
             <div class="table-cell">1</div>
             <div class="table-cell">0 (0 zł)</div>
             <div class="table-cell">2024-05-15</div>
-          </a>
 
-          <a href="user-details.html" class="table-row users-row">
+            <div class="table-cell actions-cell">
+              <a
+                href="user-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </a>
+              <button class="action-btn delete-btn" title="Usuń">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="table-row users-row">
             <div class="table-cell">
               <div class="program-info">
                 <div class="user-avatar-small">👤</div>
@@ -546,9 +701,40 @@
             <div class="table-cell">2</div>
             <div class="table-cell">2 (179 zł)</div>
             <div class="table-cell">2024-06-01</div>
-          </a>
 
-          <a href="user-details.html" class="table-row users-row">
+            <div class="table-cell actions-cell">
+              <a
+                href="user-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </a>
+              <button class="action-btn delete-btn" title="Usuń">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="table-row users-row">
             <div class="table-cell">
               <div class="program-info">
                 <div class="user-avatar-small">👤</div>
@@ -563,9 +749,40 @@
             <div class="table-cell">3</div>
             <div class="table-cell">4 (329 zł)</div>
             <div class="table-cell">2024-07-12</div>
-          </a>
 
-          <a href="user-details.html" class="table-row users-row">
+            <div class="table-cell actions-cell">
+              <a
+                href="user-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </a>
+              <button class="action-btn delete-btn" title="Usuń">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="table-row users-row">
             <div class="table-cell">
               <div class="program-info">
                 <div class="user-avatar-small">👤</div>
@@ -580,7 +797,38 @@
             <div class="table-cell">1</div>
             <div class="table-cell">1 (79 zł)</div>
             <div class="table-cell">2024-08-05</div>
-          </a>
+
+            <div class="table-cell actions-cell">
+              <a
+                href="user-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </a>
+              <button class="action-btn delete-btn" title="Usuń">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
