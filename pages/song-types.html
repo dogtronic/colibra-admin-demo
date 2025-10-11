@@ -229,13 +229,19 @@
 
       <div class="sidebar-footer">
         <button class="change-password-btn" id="changePasswordBtn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
             <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
           </svg>
           Zmień hasło
         </button>
-      </div>    </aside>
+      </div>
+    </aside>
 
     <main class="main-content">
       <div class="content-header">
@@ -317,7 +323,11 @@
         <h2>Lista typów utworów</h2>
         <div class="programs-table">
           <div class="table-header song-types-header">
-            <div class="table-cell sortable" data-sort="name" title="Kliknij aby sortować według nazwy typu">
+            <div
+              class="table-cell sortable"
+              data-sort="name"
+              title="Kliknij aby sortować według nazwy typu"
+            >
               <span>Nazwa typu</span>
               <svg
                 class="sort-icon"
@@ -329,7 +339,11 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell sortable" data-sort="songs" title="Kliknij aby sortować według liczby utworów">
+            <div
+              class="table-cell sortable"
+              data-sort="songs"
+              title="Kliknij aby sortować według liczby utworów"
+            >
               <span>Liczba utworów</span>
               <svg
                 class="sort-icon"
@@ -341,7 +355,11 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell sortable" data-sort="created" title="Kliknij aby sortować według daty utworzenia">
+            <div
+              class="table-cell sortable"
+              data-sort="created"
+              title="Kliknij aby sortować według daty utworzenia"
+            >
               <span>Utworzone</span>
               <svg
                 class="sort-icon"
@@ -353,9 +371,15 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
+            <div class="table-cell actions-cell">Akcje</div>
           </div>
 
-          <div class="table-row song-types-row" data-name="Medytacje" data-songs="85" data-created="2024-01-15">
+          <div
+            class="table-row song-types-row"
+            data-name="Medytacje"
+            data-songs="85"
+            data-created="2024-01-15"
+          >
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">🧘</div>
@@ -364,31 +388,64 @@
             </div>
             <div class="table-cell">85</div>
             <div class="table-cell">2024-01-15</div>
-          
+
             <div class="table-cell actions-cell">
-              <a href="song-type-details.html" class="action-btn view-btn" title="Podgląd">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <a
+                href="song-type-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </a>
-              <a href="add-song-type.html" class="action-btn edit-btn" title="Edytuj">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <a
+                href="add-song-type.html"
+                class="action-btn edit-btn"
+                title="Edytuj"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
                 </svg>
               </a>
               <button class="action-btn delete-btn" title="Usuń">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="3 6 5 6 21 6"></polyline>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
                 </svg>
               </button>
             </div>
           </div>
 
-
-          <div class="table-row song-types-row" data-name="Hipnozy" data-songs="28" data-created="2024-02-10">
+          <div
+            class="table-row song-types-row"
+            data-name="Hipnozy"
+            data-songs="28"
+            data-created="2024-02-10"
+          >
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">💤</div>
@@ -397,31 +454,64 @@
             </div>
             <div class="table-cell">28</div>
             <div class="table-cell">2024-02-10</div>
-          
+
             <div class="table-cell actions-cell">
-              <a href="song-type-details.html" class="action-btn view-btn" title="Podgląd">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <a
+                href="song-type-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </a>
-              <a href="add-song-type.html" class="action-btn edit-btn" title="Edytuj">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <a
+                href="add-song-type.html"
+                class="action-btn edit-btn"
+                title="Edytuj"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
                 </svg>
               </a>
               <button class="action-btn delete-btn" title="Usuń">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="3 6 5 6 21 6"></polyline>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
                 </svg>
               </button>
             </div>
           </div>
 
-
-          <div class="table-row song-types-row" data-name="Ekspresówki" data-songs="14" data-created="2024-03-20">
+          <div
+            class="table-row song-types-row"
+            data-name="Ekspresówki"
+            data-songs="14"
+            data-created="2024-03-20"
+          >
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">⚡</div>
@@ -430,29 +520,57 @@
             </div>
             <div class="table-cell">14</div>
             <div class="table-cell">2024-03-20</div>
-          
+
             <div class="table-cell actions-cell">
-              <a href="song-type-details.html" class="action-btn view-btn" title="Podgląd">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <a
+                href="song-type-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </a>
-              <a href="add-song-type.html" class="action-btn edit-btn" title="Edytuj">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <a
+                href="add-song-type.html"
+                class="action-btn edit-btn"
+                title="Edytuj"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
                 </svg>
               </a>
               <button class="action-btn delete-btn" title="Usuń">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="3 6 5 6 21 6"></polyline>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
                 </svg>
               </button>
             </div>
           </div>
-
         </div>
       </div>
     </main>
@@ -510,13 +628,13 @@
 
       sortableHeaders.forEach((header) => {
         header.style.cursor = "pointer";
-        
+
         header.addEventListener("click", function () {
           const sortKey = this.dataset.sort;
           const table = this.closest(".programs-table");
           const tbody = table;
           const rows = Array.from(tbody.querySelectorAll(".table-row"));
-          
+
           // Toggle direction if same column
           if (currentSort.column === sortKey) {
             currentSort.direction =
@@ -525,20 +643,20 @@
             currentSort.direction = "asc";
           }
           currentSort.column = sortKey;
-          
+
           // Remove all sort classes and reset icons
           sortableHeaders.forEach((h) => {
             h.classList.remove("sort-asc", "sort-desc");
           });
-          
+
           // Add current sort class
           this.classList.add(`sort-${currentSort.direction}`);
-          
+
           // Sort rows
           rows.sort((a, b) => {
             let aVal = a.dataset[sortKey] || "";
             let bVal = b.dataset[sortKey] || "";
-            
+
             // Handle numeric sorting for songs count
             if (sortKey === "songs") {
               aVal = parseInt(aVal) || 0;
@@ -548,14 +666,18 @@
               aVal = aVal.toLowerCase();
               bVal = bVal.toLowerCase();
             }
-            
+
             if (currentSort.direction === "asc") {
-              return sortKey === "songs" ? aVal - bVal : aVal.localeCompare(bVal, "pl");
+              return sortKey === "songs"
+                ? aVal - bVal
+                : aVal.localeCompare(bVal, "pl");
             } else {
-              return sortKey === "songs" ? bVal - aVal : bVal.localeCompare(aVal, "pl");
+              return sortKey === "songs"
+                ? bVal - aVal
+                : bVal.localeCompare(aVal, "pl");
             }
           });
-          
+
           // Re-append sorted rows
           rows.forEach((row) => tbody.appendChild(row));
         });

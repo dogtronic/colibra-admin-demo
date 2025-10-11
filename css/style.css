@@ -131,6 +131,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  padding: 0 24px 0 0;
 }
 
 .main-content h1 {
@@ -155,7 +156,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 24px;
-  max-width: 1200px;
+  padding: 0 24px 0 0;
 }
 
 .stat-box {
@@ -311,19 +312,19 @@ body {
 }
 
 .table-header.goals-header {
-  grid-template-columns: 2fr 1.3fr 1.2fr 1fr 1fr;
+  grid-template-columns: 2fr 1.3fr 1.2fr 1fr 1fr 150px;
 }
 
 .table-row.goals-row {
-  grid-template-columns: 2fr 1.3fr 1.2fr 1fr 1fr;
+  grid-template-columns: 2fr 1.3fr 1.2fr 1fr 1fr 150px;
 }
 
 .table-header.narrators-header {
-  grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr 150px;
 }
 
 .table-row.narrators-row {
-  grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr 150px;
 }
 
 /* Dashboard users table - 4 columns */
@@ -336,35 +337,35 @@ body {
 }
 
 .table-header.categories-header {
-  grid-template-columns: 2fr 1.2fr 1fr 1fr;
+  grid-template-columns: 2fr 1.2fr 1fr 1fr 150px;
 }
 
 .table-row.categories-row {
-  grid-template-columns: 2fr 1.2fr 1fr 1fr;
+  grid-template-columns: 2fr 1.2fr 1fr 1fr 150px;
 }
 
 .table-header.song-types-header {
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 150px;
 }
 
 .table-row.song-types-row {
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 150px;
 }
 
 .table-header.keywords-header {
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 150px;
 }
 
 .table-row.keywords-row {
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 150px;
 }
 
 .table-header.welcome-texts-header {
-  grid-template-columns: 2.5fr 1fr 1fr 1fr;
+  grid-template-columns: 2.5fr 1fr 1fr 1fr 150px;
 }
 
 .table-row.welcome-texts-row {
-  grid-template-columns: 2.5fr 1fr 1fr 1fr;
+  grid-template-columns: 2.5fr 1fr 1fr 1fr 150px;
 }
 
 .table-cell {
@@ -1696,7 +1697,7 @@ body {
 .actions-cell {
   display: flex;
   gap: 8px;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   overflow: visible;
