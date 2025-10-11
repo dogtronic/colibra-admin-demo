@@ -229,13 +229,19 @@
 
       <div class="sidebar-footer">
         <button class="change-password-btn" id="changePasswordBtn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
             <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
           </svg>
           Zmień hasło
         </button>
-      </div>    </aside>
+      </div>
+    </aside>
 
     <main class="main-content">
       <div class="content-header">
@@ -314,7 +320,11 @@
         <h2>Lista celów</h2>
         <div class="programs-table">
           <div class="table-header goals-header">
-            <div class="table-cell sortable" data-sort="name" title="Kliknij aby sortować według nazwy celu">
+            <div
+              class="table-cell sortable"
+              data-sort="name"
+              title="Kliknij aby sortować według nazwy celu"
+            >
               <span>Nazwa celu</span>
               <svg
                 class="sort-icon"
@@ -326,7 +336,11 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell sortable" data-sort="category" title="Kliknij aby sortować według kategorii">
+            <div
+              class="table-cell sortable"
+              data-sort="category"
+              title="Kliknij aby sortować według kategorii"
+            >
               <span>Kategoria</span>
               <svg
                 class="sort-icon"
@@ -338,7 +352,11 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell sortable" data-sort="type" title="Kliknij aby sortować według typu">
+            <div
+              class="table-cell sortable"
+              data-sort="type"
+              title="Kliknij aby sortować według typu"
+            >
               <span>Typ</span>
               <svg
                 class="sort-icon"
@@ -350,7 +368,11 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell sortable" data-sort="duration" title="Kliknij aby sortować według czasu trwania">
+            <div
+              class="table-cell sortable"
+              data-sort="duration"
+              title="Kliknij aby sortować według czasu trwania"
+            >
               <span>Czas trwania</span>
               <svg
                 class="sort-icon"
@@ -362,7 +384,11 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell sortable" data-sort="status" title="Kliknij aby sortować według statusu">
+            <div
+              class="table-cell sortable"
+              data-sort="status"
+              title="Kliknij aby sortować według statusu"
+            >
               <span>Status</span>
               <svg
                 class="sort-icon"
@@ -376,7 +402,14 @@
             </div>
           </div>
 
-          <div class="table-row goals-row">
+          <div
+            class="table-row goals-row"
+            data-name="7 dni medytacji"
+            data-category="Praktyka codzienna"
+            data-type="Challenge"
+            data-duration="7"
+            data-status="Aktywny"
+          >
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">🎯</div>
@@ -387,33 +420,72 @@
             <div class="table-cell">Challenge</div>
             <div class="table-cell">7 dni</div>
             <div class="table-cell">
-              <span class="badge badge-active-goal" title="Cel aktywny, dostępny do wyboru">Aktywny</span>
+              <span
+                class="badge badge-active-goal"
+                title="Cel aktywny, dostępny do wyboru"
+                >Aktywny</span
+              >
             </div>
-          
+
             <div class="table-cell actions-cell">
-              <a href="goal-details.html" class="action-btn view-btn" title="Podgląd">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <a
+                href="goal-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </a>
-              <a href="add-goal.html" class="action-btn edit-btn" title="Edytuj">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <a
+                href="add-goal.html"
+                class="action-btn edit-btn"
+                title="Edytuj"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
                 </svg>
               </a>
               <button class="action-btn delete-btn" title="Usuń">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="3 6 5 6 21 6"></polyline>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
                 </svg>
               </button>
             </div>
           </div>
 
-
-          <div class="table-row goals-row">
+          <div
+            class="table-row goals-row"
+            data-name="Redukcja stresu"
+            data-category="Zdrowie psychiczne"
+            data-type="Cel długoterminowy"
+            data-duration="30"
+            data-status="Aktywny"
+          >
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">🌱</div>
@@ -424,33 +496,72 @@
             <div class="table-cell">Cel długoterminowy</div>
             <div class="table-cell">30 dni</div>
             <div class="table-cell">
-              <span class="badge badge-active-goal" title="Cel aktywny, dostępny do wyboru">Aktywny</span>
+              <span
+                class="badge badge-active-goal"
+                title="Cel aktywny, dostępny do wyboru"
+                >Aktywny</span
+              >
             </div>
-          
+
             <div class="table-cell actions-cell">
-              <a href="goal-details.html" class="action-btn view-btn" title="Podgląd">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <a
+                href="goal-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </a>
-              <a href="add-goal.html" class="action-btn edit-btn" title="Edytuj">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <a
+                href="add-goal.html"
+                class="action-btn edit-btn"
+                title="Edytuj"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
                 </svg>
               </a>
               <button class="action-btn delete-btn" title="Usuń">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="3 6 5 6 21 6"></polyline>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
                 </svg>
               </button>
             </div>
           </div>
 
-
-          <div class="table-row goals-row">
+          <div
+            class="table-row goals-row"
+            data-name="Lepszy sen"
+            data-category="Sen i odpoczynek"
+            data-type="Nawyk"
+            data-duration="21"
+            data-status="Aktywny"
+          >
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">💤</div>
@@ -461,33 +572,72 @@
             <div class="table-cell">Nawyk</div>
             <div class="table-cell">21 dni</div>
             <div class="table-cell">
-              <span class="badge badge-active-goal" title="Cel aktywny, dostępny do wyboru">Aktywny</span>
+              <span
+                class="badge badge-active-goal"
+                title="Cel aktywny, dostępny do wyboru"
+                >Aktywny</span
+              >
             </div>
-          
+
             <div class="table-cell actions-cell">
-              <a href="goal-details.html" class="action-btn view-btn" title="Podgląd">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <a
+                href="goal-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </a>
-              <a href="add-goal.html" class="action-btn edit-btn" title="Edytuj">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <a
+                href="add-goal.html"
+                class="action-btn edit-btn"
+                title="Edytuj"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
                 </svg>
               </a>
               <button class="action-btn delete-btn" title="Usuń">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="3 6 5 6 21 6"></polyline>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
                 </svg>
               </button>
             </div>
           </div>
 
-
-          <div class="table-row goals-row">
+          <div
+            class="table-row goals-row"
+            data-name="Mindfulness w życiu"
+            data-category="Mindfulness"
+            data-type="Challenge"
+            data-duration="14"
+            data-status="Zakończony"
+          >
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">🧘</div>
@@ -500,31 +650,66 @@
             <div class="table-cell">
               <span class="badge badge-completed-goal">Zakończony</span>
             </div>
-          
+
             <div class="table-cell actions-cell">
-              <a href="goal-details.html" class="action-btn view-btn" title="Podgląd">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <a
+                href="goal-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </a>
-              <a href="add-goal.html" class="action-btn edit-btn" title="Edytuj">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <a
+                href="add-goal.html"
+                class="action-btn edit-btn"
+                title="Edytuj"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
                 </svg>
               </a>
               <button class="action-btn delete-btn" title="Usuń">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="3 6 5 6 21 6"></polyline>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
                 </svg>
               </button>
             </div>
           </div>
 
-
-          <div class="table-row goals-row">
+          <div
+            class="table-row goals-row"
+            data-name="Energia na cały dzień"
+            data-category="Poranna praktyka"
+            data-type="Nawyk"
+            data-duration="30"
+            data-status="Aktywny"
+          >
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">⚡</div>
@@ -535,33 +720,72 @@
             <div class="table-cell">Nawyk</div>
             <div class="table-cell">30 dni</div>
             <div class="table-cell">
-              <span class="badge badge-active-goal" title="Cel aktywny, dostępny do wyboru">Aktywny</span>
+              <span
+                class="badge badge-active-goal"
+                title="Cel aktywny, dostępny do wyboru"
+                >Aktywny</span
+              >
             </div>
-          
+
             <div class="table-cell actions-cell">
-              <a href="goal-details.html" class="action-btn view-btn" title="Podgląd">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <a
+                href="goal-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </a>
-              <a href="add-goal.html" class="action-btn edit-btn" title="Edytuj">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <a
+                href="add-goal.html"
+                class="action-btn edit-btn"
+                title="Edytuj"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
                 </svg>
               </a>
               <button class="action-btn delete-btn" title="Usuń">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="3 6 5 6 21 6"></polyline>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
                 </svg>
               </button>
             </div>
           </div>
 
-
-          <div class="table-row goals-row">
+          <div
+            class="table-row goals-row"
+            data-name="Praktyka wdzięczności"
+            data-category="Rozwój osobisty"
+            data-type="Challenge"
+            data-duration="21"
+            data-status="Aktywny"
+          >
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">🌸</div>
@@ -572,33 +796,72 @@
             <div class="table-cell">Challenge</div>
             <div class="table-cell">21 dni</div>
             <div class="table-cell">
-              <span class="badge badge-active-goal" title="Cel aktywny, dostępny do wyboru">Aktywny</span>
+              <span
+                class="badge badge-active-goal"
+                title="Cel aktywny, dostępny do wyboru"
+                >Aktywny</span
+              >
             </div>
-          
+
             <div class="table-cell actions-cell">
-              <a href="goal-details.html" class="action-btn view-btn" title="Podgląd">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <a
+                href="goal-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </a>
-              <a href="add-goal.html" class="action-btn edit-btn" title="Edytuj">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <a
+                href="add-goal.html"
+                class="action-btn edit-btn"
+                title="Edytuj"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
                 </svg>
               </a>
               <button class="action-btn delete-btn" title="Usuń">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="3 6 5 6 21 6"></polyline>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
                 </svg>
               </button>
             </div>
           </div>
 
-
-          <div class="table-row goals-row">
+          <div
+            class="table-row goals-row"
+            data-name="Mistrzostwo medytacji"
+            data-category="Zaawansowana praktyka"
+            data-type="Cel długoterminowy"
+            data-duration="90"
+            data-status="Aktywny"
+          >
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">🎓</div>
@@ -609,33 +872,72 @@
             <div class="table-cell">Cel długoterminowy</div>
             <div class="table-cell">90 dni</div>
             <div class="table-cell">
-              <span class="badge badge-active-goal" title="Cel aktywny, dostępny do wyboru">Aktywny</span>
+              <span
+                class="badge badge-active-goal"
+                title="Cel aktywny, dostępny do wyboru"
+                >Aktywny</span
+              >
             </div>
-          
+
             <div class="table-cell actions-cell">
-              <a href="goal-details.html" class="action-btn view-btn" title="Podgląd">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <a
+                href="goal-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </a>
-              <a href="add-goal.html" class="action-btn edit-btn" title="Edytuj">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <a
+                href="add-goal.html"
+                class="action-btn edit-btn"
+                title="Edytuj"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
                 </svg>
               </a>
               <button class="action-btn delete-btn" title="Usuń">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="3 6 5 6 21 6"></polyline>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
                 </svg>
               </button>
             </div>
           </div>
 
-
-          <div class="table-row goals-row">
+          <div
+            class="table-row goals-row"
+            data-name="Wieczorna rutyna"
+            data-category="Sen i odpoczynek"
+            data-type="Nawyk"
+            data-duration="14"
+            data-status="Zakończony"
+          >
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">🌙</div>
@@ -648,29 +950,57 @@
             <div class="table-cell">
               <span class="badge badge-completed-goal">Zakończony</span>
             </div>
-          
+
             <div class="table-cell actions-cell">
-              <a href="goal-details.html" class="action-btn view-btn" title="Podgląd">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <a
+                href="goal-details.html"
+                class="action-btn view-btn"
+                title="Podgląd"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </a>
-              <a href="add-goal.html" class="action-btn edit-btn" title="Edytuj">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <a
+                href="add-goal.html"
+                class="action-btn edit-btn"
+                title="Edytuj"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
                 </svg>
               </a>
               <button class="action-btn delete-btn" title="Usuń">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="3 6 5 6 21 6"></polyline>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
                 </svg>
               </button>
             </div>
           </div>
-
         </div>
       </div>
     </main>
@@ -728,13 +1058,13 @@
 
       sortableHeaders.forEach((header) => {
         header.style.cursor = "pointer";
-        
+
         header.addEventListener("click", function () {
           const sortKey = this.dataset.sort;
           const table = this.closest(".programs-table");
           const tbody = table;
           const rows = Array.from(tbody.querySelectorAll(".table-row"));
-          
+
           // Toggle direction if same column
           if (currentSort.column === sortKey) {
             currentSort.direction =
@@ -743,31 +1073,41 @@
             currentSort.direction = "asc";
           }
           currentSort.column = sortKey;
-          
+
           // Remove all sort classes and reset icons
           sortableHeaders.forEach((h) => {
             h.classList.remove("sort-asc", "sort-desc");
           });
-          
+
           // Add current sort class
           this.classList.add(`sort-${currentSort.direction}`);
-          
+
           // Sort rows
           rows.sort((a, b) => {
             let aVal = a.dataset[sortKey] || "";
             let bVal = b.dataset[sortKey] || "";
-            
-            // Normalize Polish characters for comparison
-            aVal = aVal.toLowerCase();
-            bVal = bVal.toLowerCase();
-            
-            if (currentSort.direction === "asc") {
-              return aVal.localeCompare(bVal, "pl");
+
+            // Handle numeric sorting for duration
+            if (sortKey === "duration") {
+              aVal = parseInt(aVal) || 0;
+              bVal = parseInt(bVal) || 0;
             } else {
-              return bVal.localeCompare(aVal, "pl");
+              // Normalize Polish characters for comparison
+              aVal = aVal.toLowerCase();
+              bVal = bVal.toLowerCase();
+            }
+
+            if (currentSort.direction === "asc") {
+              return sortKey === "duration"
+                ? aVal - bVal
+                : aVal.localeCompare(bVal, "pl");
+            } else {
+              return sortKey === "duration"
+                ? bVal - aVal
+                : bVal.localeCompare(aVal, "pl");
             }
           });
-          
+
           // Re-append sorted rows
           rows.forEach((row) => tbody.appendChild(row));
         });
