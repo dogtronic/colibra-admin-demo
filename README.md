@@ -1,7 +1,5 @@
 # Colibra Admin Panel
 
-Panel administracyjny dla aplikacji medytacyjnej Colibra - **frontend prototype**.
-
 ## 📋 O projekcie
 
 Kompletny frontend prototyp panelu administracyjnego. Zawiera wszystkie widoki UI/UX, formularze i tabele.
@@ -51,12 +49,6 @@ npx http-server -p 8000
 - Zostaniesz przekierowany do dashboardu
 
 ⚠️ **To symulacja** - każde dane zadziałają, brak weryfikacji.
-
-## 🌐 GitHub Pages
-
-1. Wgraj pliki na GitHub
-2. Settings → Pages → wybierz branch (main) i folder (root)
-3. Link: `https://twoja-nazwa.github.io/colibra-admin-panel/`
 
 ## ✅ Co działa (Frontend)
 
