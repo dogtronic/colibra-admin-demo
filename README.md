@@ -108,5 +108,5 @@ W razie pytań dotyczących UI/UX lub struktury projektu, skontaktuj się z wła
 ---
 
 **Wersja:** 1.0.0  
-**Data:** 2025-10-11  
+**Data:** 2025-10-15
 **Status:** Frontend prototype - gotowy do implementacji backendu
