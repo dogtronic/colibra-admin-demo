@@ -321,7 +321,10 @@
       <div class="programs-section">
         <h2>Lista programów</h2>
         <div class="programs-table">
-          <div class="table-header">
+          <div class="table-header programs-header-new">
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" id="selectAll" class="row-checkbox" />
+            </div>
             <div
               class="table-cell sortable"
               data-sort="name"
@@ -406,13 +409,16 @@
           </div>
 
           <div
-            class="table-row"
+            class="table-row programs-row-new"
             data-name="Medytacja poranna"
             data-category="Poranna praktyka"
             data-songs="24"
             data-level="Początkujący"
             data-payment="Darmowy"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-program-id="1" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">
@@ -496,13 +502,16 @@
           </div>
 
           <div
-            class="table-row"
+            class="table-row programs-row-new"
             data-name="Medytacja uważności"
             data-category="Mindfulness"
             data-songs="18"
             data-level="Średniozaawansowany"
             data-payment="Płatny"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-program-id="2" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">
@@ -580,13 +589,16 @@
           </div>
 
           <div
-            class="table-row"
+            class="table-row programs-row-new"
             data-name="Medytacja wieczorna"
             data-category="Relaksacja przed snem"
             data-songs="32"
             data-level="Zaawansowany"
             data-payment="Darmowy"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-program-id="3" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">
@@ -665,13 +677,16 @@
           </div>
 
           <div
-            class="table-row"
+            class="table-row programs-row-new"
             data-name="Medytacja oddechowa"
             data-category="Techniki oddychania"
             data-songs="45"
             data-level="Początkujący"
             data-payment="Płatny"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-program-id="4" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">
@@ -754,13 +769,16 @@
           </div>
 
           <div
-            class="table-row"
+            class="table-row programs-row-new"
             data-name="Medytacja wizualizacyjna"
             data-category="Wyobraźnia i spokój"
             data-songs="15"
             data-level="Średniozaawansowany"
             data-payment="Darmowy"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-program-id="5" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon">
@@ -887,6 +905,32 @@
 
     <script src="../js/modal.js"></script>
     <script>
+      // Obsługa checkboxów
+      const selectAllCheckbox = document.getElementById("selectAll");
+      const rowCheckboxes = document.querySelectorAll(".row-checkbox");
+
+      // Zaznacz/odznacz wszystko
+      selectAllCheckbox.addEventListener("change", function () {
+        rowCheckboxes.forEach((checkbox) => {
+          checkbox.checked = this.checked;
+        });
+      });
+
+      // Obsługa pojedynczych checkboxów
+      rowCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+          const allChecked = Array.from(rowCheckboxes).every(
+            (cb) => cb.checked
+          );
+          const someChecked = Array.from(rowCheckboxes).some(
+            (cb) => cb.checked
+          );
+
+          selectAllCheckbox.checked = allChecked;
+          selectAllCheckbox.indeterminate = someChecked && !allChecked;
+        });
+      });
+
       // Table sorting functionality
       const sortableHeaders = document.querySelectorAll(".sortable");
       let currentSort = { column: null, direction: "asc" };

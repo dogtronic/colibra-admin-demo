@@ -1676,6 +1676,21 @@ body {
   background: #f8f5f7;
 }
 
+/* Programs table with checkboxes */
+.table-header.programs-header-new {
+  grid-template-columns: 30px 2.5fr 1fr 1fr 1fr 1fr 150px !important;
+}
+
+.table-row.programs-row-new {
+  grid-template-columns: 30px 2.5fr 1fr 1fr 1fr 1fr 150px !important;
+  cursor: default;
+  overflow: visible;
+}
+
+.table-row.programs-row-new:hover {
+  background: #f8f5f7;
+}
+
 .checkbox-cell {
   display: flex;
   align-items: center;
