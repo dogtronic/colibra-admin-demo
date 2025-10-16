@@ -316,9 +316,54 @@
       </div>
 
       <div class="programs-section">
-        <h2>Lista słów kluczowych</h2>
+        <div class="section-header">
+          <h2>Lista słów kluczowych</h2>
+          <div class="bulk-actions">
+            <button
+              class="bulk-action-btn"
+              id="bulkChangeType"
+              disabled
+              title="Zmień typ zaznaczonych słów kluczowych"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                ></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+              Zmień typ
+            </button>
+            <button
+              class="bulk-action-btn bulk-delete"
+              id="bulkDelete"
+              disabled
+              title="Usuń zaznaczone słowa kluczowe"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path
+                  d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                ></path>
+              </svg>
+              Usuń zaznaczone
+            </button>
+          </div>
+        </div>
         <div class="programs-table">
-          <div class="table-header keywords-header">
+          <div class="table-header keywords-header-new">
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" id="selectAll" class="row-checkbox" />
+            </div>
             <div
               class="table-cell sortable"
               data-sort="keyword"
@@ -371,11 +416,14 @@
           </div>
 
           <div
-            class="table-row keywords-row"
+            class="table-row keywords-row-new"
             data-keyword="medytacja"
             data-programs="28"
             data-created="2024-01-10"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-keyword-id="1" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -437,11 +485,14 @@
           </div>
 
           <div
-            class="table-row keywords-row"
+            class="table-row keywords-row-new"
             data-keyword="relaks"
             data-programs="22"
             data-created="2024-01-12"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-keyword-id="2" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -503,11 +554,14 @@
           </div>
 
           <div
-            class="table-row keywords-row"
+            class="table-row keywords-row-new"
             data-keyword="mindfulness"
             data-programs="18"
             data-created="2024-01-15"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-keyword-id="3" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -569,11 +623,14 @@
           </div>
 
           <div
-            class="table-row keywords-row"
+            class="table-row keywords-row-new"
             data-keyword="sen"
             data-programs="15"
             data-created="2024-01-18"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-keyword-id="4" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -635,11 +692,14 @@
           </div>
 
           <div
-            class="table-row keywords-row"
+            class="table-row keywords-row-new"
             data-keyword="stres"
             data-programs="20"
             data-created="2024-01-20"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-keyword-id="5" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -701,11 +761,14 @@
           </div>
 
           <div
-            class="table-row keywords-row"
+            class="table-row keywords-row-new"
             data-keyword="oddech"
             data-programs="16"
             data-created="2024-01-22"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-keyword-id="6" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -767,11 +830,14 @@
           </div>
 
           <div
-            class="table-row keywords-row"
+            class="table-row keywords-row-new"
             data-keyword="koncentracja"
             data-programs="12"
             data-created="2024-02-01"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-keyword-id="7" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -833,11 +899,14 @@
           </div>
 
           <div
-            class="table-row keywords-row"
+            class="table-row keywords-row-new"
             data-keyword="spokój"
             data-programs="25"
             data-created="2024-02-05"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-keyword-id="8" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -899,11 +968,14 @@
           </div>
 
           <div
-            class="table-row keywords-row"
+            class="table-row keywords-row-new"
             data-keyword="początkujący"
             data-programs="30"
             data-created="2024-02-08"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-keyword-id="9" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -965,11 +1037,18 @@
           </div>
 
           <div
-            class="table-row keywords-row"
+            class="table-row keywords-row-new"
             data-keyword="zaawansowany"
             data-programs="8"
             data-created="2024-02-10"
           >
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-keyword-id="10"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -1031,11 +1110,18 @@
           </div>
 
           <div
-            class="table-row keywords-row"
+            class="table-row keywords-row-new"
             data-keyword="energia"
             data-programs="14"
             data-created="2024-02-15"
           >
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-keyword-id="11"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -1097,11 +1183,18 @@
           </div>
 
           <div
-            class="table-row keywords-row"
+            class="table-row keywords-row-new"
             data-keyword="wieczór"
             data-programs="11"
             data-created="2024-02-18"
           >
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-keyword-id="12"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -1212,6 +1305,88 @@
 
     <script src="../js/modal.js"></script>
     <script>
+      // Obsługa checkboxów
+      const selectAllCheckbox = document.getElementById("selectAll");
+      const rowCheckboxes = document.querySelectorAll(".row-checkbox");
+      const bulkChangeTypeBtn = document.getElementById("bulkChangeType");
+      const bulkDeleteBtn = document.getElementById("bulkDelete");
+
+      // Zaznacz/odznacz wszystko
+      selectAllCheckbox.addEventListener("change", function () {
+        rowCheckboxes.forEach((checkbox) => {
+          checkbox.checked = this.checked;
+        });
+        updateBulkActionsState();
+      });
+
+      // Obsługa pojedynczych checkboxów
+      rowCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+          const allChecked = Array.from(rowCheckboxes).every(
+            (cb) => cb.checked
+          );
+          const someChecked = Array.from(rowCheckboxes).some(
+            (cb) => cb.checked
+          );
+
+          selectAllCheckbox.checked = allChecked;
+          selectAllCheckbox.indeterminate = someChecked && !allChecked;
+
+          updateBulkActionsState();
+        });
+      });
+
+      // Włącz/wyłącz przyciski masowych akcji
+      function updateBulkActionsState() {
+        const checkedCount = Array.from(rowCheckboxes).filter(
+          (cb) => cb.checked
+        ).length;
+        bulkChangeTypeBtn.disabled = checkedCount === 0;
+        bulkDeleteBtn.disabled = checkedCount === 0;
+      }
+
+      // Masowa zmiana typu
+      bulkChangeTypeBtn.addEventListener("click", function () {
+        const checkedKeywords = Array.from(rowCheckboxes)
+          .filter((cb) => cb.checked)
+          .map((cb) => cb.dataset.keywordId);
+
+        if (checkedKeywords.length > 0) {
+          alert(
+            `Zmiana typu dla ${checkedKeywords.length} słów kluczowych\n(Funkcja w przygotowaniu)`
+          );
+        }
+      });
+
+      // Masowe usuwanie
+      bulkDeleteBtn.addEventListener("click", function () {
+        const checkedKeywords = Array.from(rowCheckboxes)
+          .filter((cb) => cb.checked)
+          .map((cb) => cb.dataset.keywordId);
+
+        if (checkedKeywords.length > 0) {
+          if (
+            confirm(
+              `Czy na pewno chcesz usunąć ${checkedKeywords.length} słów kluczowych?`
+            )
+          ) {
+            alert(
+              `Usunięto ${checkedKeywords.length} słów kluczowych\n(Funkcja w przygotowaniu)`
+            );
+          }
+        }
+      });
+
+      // Przyciski akcji w wierszach
+      document.querySelectorAll(".delete-btn").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          if (confirm("Czy na pewno chcesz usunąć to słowo kluczowe?")) {
+            alert("Słowo kluczowe zostało usunięte\n(Funkcja w przygotowaniu)");
+          }
+        });
+      });
+
       // Table sorting functionality
       const sortableHeaders = document.querySelectorAll(".sortable");
       let currentSort = { column: null, direction: "asc" };

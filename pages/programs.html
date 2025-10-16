@@ -319,9 +319,51 @@
       </div>
 
       <div class="programs-section">
-        <h2>Lista programów</h2>
+        <div class="section-header">
+          <h2>Lista programów</h2>
+          <div class="bulk-actions">
+            <button
+              class="bulk-action-btn"
+              id="bulkChangeType"
+              disabled
+              title="Zmień typ zaznaczonych programów"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                ></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+              Zmień typ
+            </button>
+            <button
+              class="bulk-action-btn bulk-delete"
+              id="bulkDelete"
+              disabled
+              title="Usuń zaznaczone programy"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path
+                  d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                ></path>
+              </svg>
+              Usuń zaznaczone
+            </button>
+          </div>
+        </div>
         <div class="programs-table">
-          <div class="table-header programs-header-new">
+          <div class="table-header programs-header-new" style="z-index: 0">
             <div class="table-cell checkbox-cell">
               <input type="checkbox" id="selectAll" class="row-checkbox" />
             </div>
@@ -415,6 +457,7 @@
             data-songs="24"
             data-level="Początkujący"
             data-payment="Darmowy"
+            style="position: relative; z-index: 2"
           >
             <div class="table-cell checkbox-cell">
               <input type="checkbox" class="row-checkbox" data-program-id="1" />
@@ -508,6 +551,7 @@
             data-songs="18"
             data-level="Średniozaawansowany"
             data-payment="Płatny"
+            style="position: relative; z-index: 2"
           >
             <div class="table-cell checkbox-cell">
               <input type="checkbox" class="row-checkbox" data-program-id="2" />
@@ -595,6 +639,7 @@
             data-songs="32"
             data-level="Zaawansowany"
             data-payment="Darmowy"
+            style="position: relative; z-index: 2"
           >
             <div class="table-cell checkbox-cell">
               <input type="checkbox" class="row-checkbox" data-program-id="3" />
@@ -683,6 +728,7 @@
             data-songs="45"
             data-level="Początkujący"
             data-payment="Płatny"
+            style="position: relative; z-index: 2"
           >
             <div class="table-cell checkbox-cell">
               <input type="checkbox" class="row-checkbox" data-program-id="4" />
@@ -775,6 +821,7 @@
             data-songs="15"
             data-level="Średniozaawansowany"
             data-payment="Darmowy"
+            style="position: relative; z-index: 2"
           >
             <div class="table-cell checkbox-cell">
               <input type="checkbox" class="row-checkbox" data-program-id="5" />
@@ -908,12 +955,15 @@
       // Obsługa checkboxów
       const selectAllCheckbox = document.getElementById("selectAll");
       const rowCheckboxes = document.querySelectorAll(".row-checkbox");
+      const bulkChangeTypeBtn = document.getElementById("bulkChangeType");
+      const bulkDeleteBtn = document.getElementById("bulkDelete");
 
       // Zaznacz/odznacz wszystko
       selectAllCheckbox.addEventListener("change", function () {
         rowCheckboxes.forEach((checkbox) => {
           checkbox.checked = this.checked;
         });
+        updateBulkActionsState();
       });
 
       // Obsługa pojedynczych checkboxów
@@ -928,6 +978,59 @@
 
           selectAllCheckbox.checked = allChecked;
           selectAllCheckbox.indeterminate = someChecked && !allChecked;
+
+          updateBulkActionsState();
+        });
+      });
+
+      // Włącz/wyłącz przyciski masowych akcji
+      function updateBulkActionsState() {
+        const checkedCount = Array.from(rowCheckboxes).filter(
+          (cb) => cb.checked
+        ).length;
+        bulkChangeTypeBtn.disabled = checkedCount === 0;
+        bulkDeleteBtn.disabled = checkedCount === 0;
+      }
+
+      // Masowa zmiana typu
+      bulkChangeTypeBtn.addEventListener("click", function () {
+        const checkedPrograms = Array.from(rowCheckboxes)
+          .filter((cb) => cb.checked)
+          .map((cb) => cb.dataset.programId);
+
+        if (checkedPrograms.length > 0) {
+          alert(
+            `Zmiana typu dla ${checkedPrograms.length} programów\n(Funkcja w przygotowaniu)`
+          );
+        }
+      });
+
+      // Masowe usuwanie
+      bulkDeleteBtn.addEventListener("click", function () {
+        const checkedPrograms = Array.from(rowCheckboxes)
+          .filter((cb) => cb.checked)
+          .map((cb) => cb.dataset.programId);
+
+        if (checkedPrograms.length > 0) {
+          if (
+            confirm(
+              `Czy na pewno chcesz usunąć ${checkedPrograms.length} programów?`
+            )
+          ) {
+            alert(
+              `Usunięto ${checkedPrograms.length} programów\n(Funkcja w przygotowaniu)`
+            );
+          }
+        }
+      });
+
+      // Przyciski akcji w wierszach
+      document.querySelectorAll(".delete-btn").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          if (confirm("Czy na pewno chcesz usunąć ten program?")) {
+            alert("Program został usunięty\n(Funkcja w przygotowaniu)");
+          }
         });
       });
 

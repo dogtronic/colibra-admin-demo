@@ -317,9 +317,54 @@
       </div>
 
       <div class="programs-section">
-        <h2>Lista celów</h2>
+        <div class="section-header">
+          <h2>Lista celów</h2>
+          <div class="bulk-actions">
+            <button
+              class="bulk-action-btn"
+              id="bulkChangeType"
+              disabled
+              title="Zmień typ zaznaczonych celów"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                ></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+              Zmień typ
+            </button>
+            <button
+              class="bulk-action-btn bulk-delete"
+              id="bulkDelete"
+              disabled
+              title="Usuń zaznaczone cele"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path
+                  d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                ></path>
+              </svg>
+              Usuń zaznaczone
+            </button>
+          </div>
+        </div>
         <div class="programs-table">
-          <div class="table-header goals-header">
+          <div class="table-header goals-header-new">
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" id="selectAll" class="row-checkbox" />
+            </div>
             <div
               class="table-cell sortable"
               data-sort="name"
@@ -404,13 +449,16 @@
           </div>
 
           <div
-            class="table-row goals-row"
+            class="table-row goals-row-new"
             data-name="7 dni medytacji"
             data-category="Praktyka codzienna"
             data-type="Challenge"
             data-duration="7"
             data-status="Aktywny"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-goal-id="1" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -480,13 +528,16 @@
           </div>
 
           <div
-            class="table-row goals-row"
+            class="table-row goals-row-new"
             data-name="Redukcja stresu"
             data-category="Zdrowie psychiczne"
             data-type="Cel długoterminowy"
             data-duration="30"
             data-status="Aktywny"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-goal-id="2" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -556,13 +607,16 @@
           </div>
 
           <div
-            class="table-row goals-row"
+            class="table-row goals-row-new"
             data-name="Lepszy sen"
             data-category="Sen i odpoczynek"
             data-type="Nawyk"
             data-duration="21"
             data-status="Aktywny"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-goal-id="3" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -632,13 +686,16 @@
           </div>
 
           <div
-            class="table-row goals-row"
+            class="table-row goals-row-new"
             data-name="Mindfulness w życiu"
             data-category="Mindfulness"
             data-type="Challenge"
             data-duration="14"
             data-status="Zakończony"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-goal-id="4" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -704,13 +761,16 @@
           </div>
 
           <div
-            class="table-row goals-row"
+            class="table-row goals-row-new"
             data-name="Energia na cały dzień"
             data-category="Poranna praktyka"
             data-type="Nawyk"
             data-duration="30"
             data-status="Aktywny"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-goal-id="5" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -780,13 +840,16 @@
           </div>
 
           <div
-            class="table-row goals-row"
+            class="table-row goals-row-new"
             data-name="Praktyka wdzięczności"
             data-category="Rozwój osobisty"
             data-type="Challenge"
             data-duration="21"
             data-status="Aktywny"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-goal-id="6" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -856,13 +919,16 @@
           </div>
 
           <div
-            class="table-row goals-row"
+            class="table-row goals-row-new"
             data-name="Mistrzostwo medytacji"
             data-category="Zaawansowana praktyka"
             data-type="Cel długoterminowy"
             data-duration="90"
             data-status="Aktywny"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-goal-id="7" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -932,13 +998,16 @@
           </div>
 
           <div
-            class="table-row goals-row"
+            class="table-row goals-row-new"
             data-name="Wieczorna rutyna"
             data-category="Sen i odpoczynek"
             data-type="Nawyk"
             data-duration="14"
             data-status="Zakończony"
           >
+            <div class="table-cell checkbox-cell">
+              <input type="checkbox" class="row-checkbox" data-goal-id="8" />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>

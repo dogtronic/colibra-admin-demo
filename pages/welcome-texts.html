@@ -317,9 +317,58 @@
       </div>
 
       <div class="programs-section">
-        <h2>Lista tekstów powitalnych</h2>
+        <div class="section-header">
+          <h2>Lista tekstów powitalnych</h2>
+          <div class="bulk-actions">
+            <button
+              class="bulk-action-btn"
+              id="bulkChangeType"
+              disabled
+              title="Zmień typ zaznaczonych tekstów powitalnych"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                ></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+              Zmień typ
+            </button>
+            <button
+              class="bulk-action-btn bulk-delete"
+              id="bulkDelete"
+              disabled
+              title="Usuń zaznaczone teksty powitalne"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path
+                  d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                ></path>
+              </svg>
+              Usuń zaznaczone
+            </button>
+          </div>
+        </div>
         <div class="programs-table">
-          <div class="table-header welcome-texts-header">
+          <div class="table-header welcome-texts-header-new">
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                id="selectAllWelcomeTexts"
+                class="select-all-checkbox"
+              />
+            </div>
             <div
               class="table-cell sortable"
               data-sort="text"
@@ -388,12 +437,19 @@
           </div>
 
           <div
-            class="table-row welcome-texts-row"
+            class="table-row welcome-texts-row-new"
             data-text="Nowy dzień, nowe możliwości"
             data-views="342"
             data-status="Aktywny"
             data-created="2024-01-15"
           >
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-welcome-text-id="1"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -462,12 +518,19 @@
           </div>
 
           <div
-            class="table-row welcome-texts-row"
+            class="table-row welcome-texts-row-new"
             data-text="Dziś możesz więcej niż myślisz"
             data-views="298"
             data-status="Aktywny"
             data-created="2024-01-18"
           >
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-welcome-text-id="2"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -536,12 +599,19 @@
           </div>
 
           <div
-            class="table-row welcome-texts-row"
+            class="table-row welcome-texts-row-new"
             data-text="Zrób coś dla siebie"
             data-views="276"
             data-status="Aktywny"
             data-created="2024-01-20"
           >
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-welcome-text-id="3"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -609,7 +679,14 @@
             </div>
           </div>
 
-          <div class="table-row welcome-texts-row">
+          <div class="table-row welcome-texts-row-new">
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-welcome-text-id="4"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -677,7 +754,14 @@
             </div>
           </div>
 
-          <div class="table-row welcome-texts-row">
+          <div class="table-row welcome-texts-row-new">
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-welcome-text-id="5"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -745,7 +829,14 @@
             </div>
           </div>
 
-          <div class="table-row welcome-texts-row">
+          <div class="table-row welcome-texts-row-new">
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-welcome-text-id="6"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -813,7 +904,14 @@
             </div>
           </div>
 
-          <div class="table-row welcome-texts-row">
+          <div class="table-row welcome-texts-row-new">
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-welcome-text-id="7"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -881,7 +979,14 @@
             </div>
           </div>
 
-          <div class="table-row welcome-texts-row">
+          <div class="table-row welcome-texts-row-new">
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-welcome-text-id="8"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -949,7 +1054,14 @@
             </div>
           </div>
 
-          <div class="table-row welcome-texts-row">
+          <div class="table-row welcome-texts-row-new">
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-welcome-text-id="9"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
@@ -1017,7 +1129,14 @@
             </div>
           </div>
 
-          <div class="table-row welcome-texts-row">
+          <div class="table-row welcome-texts-row-new">
+            <div class="table-cell checkbox-cell">
+              <input
+                type="checkbox"
+                class="row-checkbox"
+                data-welcome-text-id="10"
+              />
+            </div>
             <div class="table-cell">
               <div class="program-info">
                 <div class="program-icon"></div>
