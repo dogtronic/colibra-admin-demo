@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programy - Colibra</title>
+    <title>Kupony promocyjne - Colibra</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
@@ -93,7 +93,7 @@
             </span>
             <span>Utwory</span>
           </a>
-          <a href="programs.html" class="nav-item active">
+          <a href="programs.html" class="nav-item">
             <span class="icon">
               <svg
                 viewBox="0 0 24 24"
@@ -208,7 +208,7 @@
 
         <div class="nav-section">
           <div class="nav-section-title">MARKETING</div>
-          <a href="coupons.html" class="nav-item">
+          <a href="coupons.html" class="nav-item active">
             <span class="icon">
               <svg
                 viewBox="0 0 24 24"
@@ -264,10 +264,77 @@
       </div>
     </aside>
 
+    <!-- Modal zmiany hasła -->
+    <div id="changePasswordModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Zmiana hasła</h2>
+          <button class="modal-close" id="closeModal">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <form class="modal-form" id="changePasswordForm">
+          <div class="form-group">
+            <label for="currentPassword">Aktualne hasło *</label>
+            <input
+              type="password"
+              id="currentPassword"
+              name="currentPassword"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="newPassword">Nowe hasło *</label>
+            <input
+              type="password"
+              id="newPassword"
+              name="newPassword"
+              required
+              minlength="8"
+            />
+            <small class="form-hint">Minimum 8 znaków</small>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Powtórz nowe hasło *</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+            />
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn-secondary" id="cancelBtn">
+              Anuluj
+            </button>
+            <button type="submit" class="btn-primary">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Zmień hasło
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <main class="main-content">
       <div class="content-header">
-        <h1>Zarządzanie programami</h1>
-        <a href="add-program.html" class="btn-primary">
+        <h1>Kupony promocyjne</h1>
+        <a href="add-coupon.html" class="btn-primary">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -277,10 +344,16 @@
             <line x1="12" y1="5" x2="12" y2="19"></line>
             <line x1="5" y1="12" x2="19" y2="12"></line>
           </svg>
-          Dodaj program
+          Dodaj nowy kupon
         </a>
       </div>
 
+      <div class="page-description">
+        Zarządzaj kuponami promocyjnymi dla swoich użytkowników. Twórz rabaty
+        procentowe lub kwotowe na konkretne produkty lub całe kategorie.
+      </div>
+
+      <!-- Stats Cards -->
       <div class="stats-grid">
         <div class="stat-box">
           <div class="stat-icon">
@@ -290,13 +363,16 @@
               stroke="currentColor"
               stroke-width="2"
             >
-              <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
-              <polyline points="17 2 12 7 7 2"></polyline>
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+              ></path>
+              <polyline points="3.27,6.96 12,12.01 20.73,6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
             </svg>
           </div>
           <div class="stat-content">
-            <div class="stat-number">48</div>
-            <div class="stat-label">Dostępne programy</div>
+            <div class="stat-number">24</div>
+            <div class="stat-label">Aktywne kupony</div>
           </div>
         </div>
 
@@ -308,15 +384,12 @@
               stroke="currentColor"
               stroke-width="2"
             >
-              <rect x="3" y="3" width="7" height="7"></rect>
-              <rect x="14" y="3" width="7" height="7"></rect>
-              <rect x="14" y="14" width="7" height="7"></rect>
-              <rect x="3" y="14" width="7" height="7"></rect>
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
             </svg>
           </div>
           <div class="stat-content">
-            <div class="stat-number">12</div>
-            <div class="stat-label">Kategorie tematyczne</div>
+            <div class="stat-number">1,247</div>
+            <div class="stat-label">Wykorzystane kupony</div>
           </div>
         </div>
 
@@ -328,45 +401,41 @@
               stroke="currentColor"
               stroke-width="2"
             >
-              <circle cx="12" cy="12" r="10"></circle>
-              <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              <path
+                d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+              ></path>
             </svg>
           </div>
           <div class="stat-content">
-            <div class="stat-number">156</div>
-            <div class="stat-label">Dostępne nagrania</div>
+            <div class="stat-number">12,450 zł</div>
+            <div class="stat-label">Zaoszczędzone przez klientów</div>
           </div>
         </div>
       </div>
 
+      <!-- Coupons Table -->
       <div class="programs-section">
         <div class="section-header">
-          <h2>Lista programów</h2>
+          <h2>Wszystkie kupony</h2>
           <div class="bulk-actions">
-            <button
-              class="bulk-action-btn"
-              id="bulkChangeType"
-              disabled
-              title="Zmień typ zaznaczonych programów"
-            >
+            <button class="bulk-action-btn" title="Zaznacz wszystkie">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
               >
+                <polyline points="9 11 12 14 22 4"></polyline>
                 <path
-                  d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                  d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
                 ></path>
-                <line x1="7" y1="7" x2="7.01" y2="7"></line>
               </svg>
-              Zmień typ
+              Zaznacz wszystkie
             </button>
             <button
               class="bulk-action-btn bulk-delete"
-              id="bulkDelete"
               disabled
-              title="Usuń zaznaczone programy"
+              title="Usuń zaznaczone"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -383,17 +452,18 @@
             </button>
           </div>
         </div>
+
         <div class="programs-table">
-          <div class="table-header programs-header-new" style="z-index: 0">
-            <div class="table-cell checkbox-cell">
-              <input type="checkbox" id="selectAll" class="row-checkbox" />
+          <div class="table-header coupons-header-new">
+            <div class="checkbox-cell">
+              <input
+                type="checkbox"
+                class="select-all-checkbox"
+                title="Zaznacz wszystkie"
+              />
             </div>
-            <div
-              class="table-cell sortable"
-              data-sort="name"
-              title="Kliknij aby sortować według nazwy"
-            >
-              <span>Nazwa programu</span>
+            <div class="sortable" data-sort="code">
+              <span>Kod kuponu</span>
               <svg
                 class="sort-icon"
                 viewBox="0 0 24 24"
@@ -404,12 +474,8 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div
-              class="table-cell sortable"
-              data-sort="category"
-              title="Kliknij aby sortować według kategorii"
-            >
-              <span>Kategoria</span>
+            <div class="sortable" data-sort="type">
+              <span>Typ rabatu</span>
               <svg
                 class="sort-icon"
                 viewBox="0 0 24 24"
@@ -420,12 +486,8 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div
-              class="table-cell sortable"
-              data-sort="songs"
-              title="Kliknij aby sortować według liczby nagrań"
-            >
-              <span>Liczba nagrań</span>
+            <div class="sortable" data-sort="amount">
+              <span>Wartość</span>
               <svg
                 class="sort-icon"
                 viewBox="0 0 24 24"
@@ -436,12 +498,8 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div
-              class="table-cell sortable"
-              data-sort="level"
-              title="Kliknij aby sortować według poziomu trudności"
-            >
-              <span>Poziom</span>
+            <div class="sortable" data-sort="usage">
+              <span>Wykorzystanie</span>
               <svg
                 class="sort-icon"
                 viewBox="0 0 24 24"
@@ -452,12 +510,8 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div
-              class="table-cell sortable"
-              data-sort="payment"
-              title="Kliknij aby sortować według statusu płatności"
-            >
-              <span>Status płatności</span>
+            <div class="sortable" data-sort="expiry">
+              <span>Wygasa</span>
               <svg
                 class="sort-icon"
                 viewBox="0 0 24 24"
@@ -468,57 +522,53 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <div class="table-cell actions-cell">Akcje</div>
+            <div>Działania</div>
           </div>
 
           <div
-            class="table-row programs-row-new"
-            data-name="Medytacja poranna"
-            data-category="Poranna praktyka"
-            data-songs="24"
-            data-level="Początkujący"
-            data-payment="Darmowy"
-            style="position: relative; z-index: 2"
+            class="table-row coupons-row-new"
+            data-code="WELCOME20"
+            data-type="percentage"
+            data-amount="20"
+            data-usage="245"
+            data-expiry="2024-12-31"
           >
-            <div class="table-cell checkbox-cell">
-              <input type="checkbox" class="row-checkbox" data-program-id="1" />
+            <div class="checkbox-cell">
+              <input type="checkbox" class="row-checkbox" />
             </div>
             <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                  </svg>
+              <div class="coupon-info">
+                <div class="coupon-code">WELCOME20</div>
+                <div class="coupon-description-small">
+                  Rabat powitalny dla nowych użytkowników
                 </div>
-                <span>Medytacja poranna</span>
               </div>
             </div>
-            <div class="table-cell">Poranna praktyka</div>
-            <div class="table-cell">24</div>
-            <div class="table-cell">Początkujący</div>
             <div class="table-cell">
-              <span class="badge badge-free" title="Program dostępny bezpłatnie"
-                >Darmowy</span
-              >
+              <span class="badge badge-percentage">Procentowy</span>
             </div>
-            <div class="table-cell actions-cell">
+            <div class="table-cell">
+              <div class="coupon-amount">20%</div>
+            </div>
+            <div class="table-cell">
+              <div class="usage-info">
+                <div class="usage-count">245/1000</div>
+                <div class="usage-bar">
+                  <div class="usage-fill" style="width: 24.5%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="table-cell">
+              <div class="expiry-info">
+                <div class="expiry-date">31.12.2024</div>
+                <span class="badge badge-active">Aktywny</span>
+              </div>
+            </div>
+            <div class="actions-cell">
               <a
-                href="program-details.html"
+                href="coupon-details.html?id=1"
                 class="action-btn view-btn"
-                title="Podgląd"
+                title="Zobacz szczegóły"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -531,7 +581,7 @@
                 </svg>
               </a>
               <a
-                href="add-program.html"
+                href="add-coupon.html?id=1"
                 class="action-btn edit-btn"
                 title="Edytuj"
               >
@@ -566,47 +616,49 @@
           </div>
 
           <div
-            class="table-row programs-row-new"
-            data-name="Medytacja uważności"
-            data-category="Mindfulness"
-            data-songs="18"
-            data-level="Średniozaawansowany"
-            data-payment="Płatny"
-            style="position: relative; z-index: 2"
+            class="table-row coupons-row-new"
+            data-code="SUMMER50"
+            data-type="fixed"
+            data-amount="50"
+            data-usage="89"
+            data-expiry="2024-08-31"
           >
-            <div class="table-cell checkbox-cell">
-              <input type="checkbox" class="row-checkbox" data-program-id="2" />
+            <div class="checkbox-cell">
+              <input type="checkbox" class="row-checkbox" />
             </div>
             <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <circle cx="12" cy="12" r="3"></circle>
-                    <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"></path>
-                  </svg>
+              <div class="coupon-info">
+                <div class="coupon-code">SUMMER50</div>
+                <div class="coupon-description-small">
+                  Letnia promocja - 50 zł rabatu
                 </div>
-                <span>Medytacja uważności</span>
               </div>
             </div>
-            <div class="table-cell">Mindfulness</div>
-            <div class="table-cell">18</div>
-            <div class="table-cell">Średniozaawansowany</div>
             <div class="table-cell">
-              <span class="badge badge-paid" title="Program wymaga zakupu"
-                >Płatny</span
-              >
+              <span class="badge badge-fixed">Kwotowy</span>
             </div>
-
-            <div class="table-cell actions-cell">
+            <div class="table-cell">
+              <div class="coupon-amount">50 zł</div>
+            </div>
+            <div class="table-cell">
+              <div class="usage-info">
+                <div class="usage-count">89/500</div>
+                <div class="usage-bar">
+                  <div class="usage-fill" style="width: 17.8%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="table-cell">
+              <div class="expiry-info">
+                <div class="expiry-date">31.08.2024</div>
+                <span class="badge badge-active">Aktywny</span>
+              </div>
+            </div>
+            <div class="actions-cell">
               <a
-                href="program-details.html"
+                href="coupon-details.html?id=2"
                 class="action-btn view-btn"
-                title="Podgląd"
+                title="Zobacz szczegóły"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -619,7 +671,7 @@
                 </svg>
               </a>
               <a
-                href="add-program.html"
+                href="add-coupon.html?id=2"
                 class="action-btn edit-btn"
                 title="Edytuj"
               >
@@ -654,48 +706,49 @@
           </div>
 
           <div
-            class="table-row programs-row-new"
-            data-name="Medytacja wieczorna"
-            data-category="Relaksacja przed snem"
-            data-songs="32"
-            data-level="Zaawansowany"
-            data-payment="Darmowy"
-            style="position: relative; z-index: 2"
+            class="table-row coupons-row-new"
+            data-code="VIP30"
+            data-type="percentage"
+            data-amount="30"
+            data-usage="156"
+            data-expiry="2024-06-15"
           >
-            <div class="table-cell checkbox-cell">
-              <input type="checkbox" class="row-checkbox" data-program-id="3" />
+            <div class="checkbox-cell">
+              <input type="checkbox" class="row-checkbox" />
             </div>
             <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-                    ></path>
-                  </svg>
+              <div class="coupon-info">
+                <div class="coupon-code">VIP30</div>
+                <div class="coupon-description-small">
+                  Rabat dla użytkowników VIP
                 </div>
-                <span>Medytacja wieczorna</span>
               </div>
             </div>
-            <div class="table-cell">Relaksacja przed snem</div>
-            <div class="table-cell">32</div>
-            <div class="table-cell">Zaawansowany</div>
             <div class="table-cell">
-              <span class="badge badge-free" title="Program dostępny bezpłatnie"
-                >Darmowy</span
-              >
+              <span class="badge badge-percentage">Procentowy</span>
             </div>
-
-            <div class="table-cell actions-cell">
+            <div class="table-cell">
+              <div class="coupon-amount">30%</div>
+            </div>
+            <div class="table-cell">
+              <div class="usage-info">
+                <div class="usage-count">156/200</div>
+                <div class="usage-bar">
+                  <div class="usage-fill" style="width: 78%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="table-cell">
+              <div class="expiry-info">
+                <div class="expiry-date">15.06.2024</div>
+                <span class="badge badge-expired">Wygasł</span>
+              </div>
+            </div>
+            <div class="actions-cell">
               <a
-                href="program-details.html"
+                href="coupon-details.html?id=3"
                 class="action-btn view-btn"
-                title="Podgląd"
+                title="Zobacz szczegóły"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -708,7 +761,7 @@
                 </svg>
               </a>
               <a
-                href="add-program.html"
+                href="add-coupon.html?id=3"
                 class="action-btn edit-btn"
                 title="Edytuj"
               >
@@ -743,52 +796,47 @@
           </div>
 
           <div
-            class="table-row programs-row-new"
-            data-name="Medytacja oddechowa"
-            data-category="Techniki oddychania"
-            data-songs="45"
-            data-level="Początkujący"
-            data-payment="Płatny"
-            style="position: relative; z-index: 2"
+            class="table-row coupons-row-new"
+            data-code="NEWYEAR2024"
+            data-type="percentage"
+            data-amount="25"
+            data-usage="0"
+            data-expiry="2024-12-31"
           >
-            <div class="table-cell checkbox-cell">
-              <input type="checkbox" class="row-checkbox" data-program-id="4" />
+            <div class="checkbox-cell">
+              <input type="checkbox" class="row-checkbox" />
             </div>
             <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path d="M9 12l2 2 4-4"></path>
-                    <path
-                      d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"
-                    ></path>
-                    <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"></path>
-                    <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"></path>
-                    <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"></path>
-                  </svg>
-                </div>
-                <span>Medytacja oddechowa</span>
+              <div class="coupon-info">
+                <div class="coupon-code">NEWYEAR2024</div>
+                <div class="coupon-description-small">Noworoczna promocja</div>
               </div>
             </div>
-            <div class="table-cell">Techniki oddychania</div>
-            <div class="table-cell">45</div>
-            <div class="table-cell">Początkujący</div>
             <div class="table-cell">
-              <span class="badge badge-paid" title="Program wymaga zakupu"
-                >Płatny</span
-              >
+              <span class="badge badge-percentage">Procentowy</span>
             </div>
-
-            <div class="table-cell actions-cell">
+            <div class="table-cell">
+              <div class="coupon-amount">25%</div>
+            </div>
+            <div class="table-cell">
+              <div class="usage-info">
+                <div class="usage-count">0/1000</div>
+                <div class="usage-bar">
+                  <div class="usage-fill" style="width: 0%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="table-cell">
+              <div class="expiry-info">
+                <div class="expiry-date">31.12.2024</div>
+                <span class="badge badge-active">Aktywny</span>
+              </div>
+            </div>
+            <div class="actions-cell">
               <a
-                href="program-details.html"
+                href="coupon-details.html?id=4"
                 class="action-btn view-btn"
-                title="Podgląd"
+                title="Zobacz szczegóły"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -801,7 +849,7 @@
                 </svg>
               </a>
               <a
-                href="add-program.html"
+                href="add-coupon.html?id=4"
                 class="action-btn edit-btn"
                 title="Edytuj"
               >
@@ -836,47 +884,49 @@
           </div>
 
           <div
-            class="table-row programs-row-new"
-            data-name="Medytacja wizualizacyjna"
-            data-category="Wyobraźnia i spokój"
-            data-songs="15"
-            data-level="Średniozaawansowany"
-            data-payment="Darmowy"
-            style="position: relative; z-index: 2"
+            class="table-row coupons-row-new"
+            data-code="FIRSTTIME"
+            data-type="fixed"
+            data-amount="25"
+            data-usage="67"
+            data-expiry="2024-12-31"
           >
-            <div class="table-cell checkbox-cell">
-              <input type="checkbox" class="row-checkbox" data-program-id="5" />
+            <div class="checkbox-cell">
+              <input type="checkbox" class="row-checkbox" />
             </div>
             <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
+              <div class="coupon-info">
+                <div class="coupon-code">FIRSTTIME</div>
+                <div class="coupon-description-small">
+                  Pierwszy zakup - 25 zł rabatu
                 </div>
-                <span>Medytacja wizualizacyjna</span>
               </div>
             </div>
-            <div class="table-cell">Wyobraźnia i spokój</div>
-            <div class="table-cell">15</div>
-            <div class="table-cell">Średniozaawansowany</div>
             <div class="table-cell">
-              <span class="badge badge-free" title="Program dostępny bezpłatnie"
-                >Darmowy</span
-              >
+              <span class="badge badge-fixed">Kwotowy</span>
             </div>
-
-            <div class="table-cell actions-cell">
+            <div class="table-cell">
+              <div class="coupon-amount">25 zł</div>
+            </div>
+            <div class="table-cell">
+              <div class="usage-info">
+                <div class="usage-count">67/500</div>
+                <div class="usage-bar">
+                  <div class="usage-fill" style="width: 13.4%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="table-cell">
+              <div class="expiry-info">
+                <div class="expiry-date">31.12.2024</div>
+                <span class="badge badge-active">Aktywny</span>
+              </div>
+            </div>
+            <div class="actions-cell">
               <a
-                href="program-details.html"
+                href="coupon-details.html?id=5"
                 class="action-btn view-btn"
-                title="Podgląd"
+                title="Zobacz szczegóły"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -889,7 +939,7 @@
                 </svg>
               </a>
               <a
-                href="add-program.html"
+                href="add-coupon.html?id=5"
                 class="action-btn edit-btn"
                 title="Edytuj"
               >
@@ -926,133 +976,72 @@
       </div>
     </main>
 
-    <!-- Modal zmiany hasła -->
-    <div class="modal" id="changePasswordModal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2>Zmień hasło</h2>
-          <button class="close-btn" id="closeModal">&times;</button>
-        </div>
-        <form class="modal-form" id="changePasswordForm">
-          <div class="form-group">
-            <label for="currentPassword">Obecne hasło</label>
-            <input
-              type="password"
-              id="currentPassword"
-              name="currentPassword"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="newPassword">Nowe hasło</label>
-            <input
-              type="password"
-              id="newPassword"
-              name="newPassword"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="confirmPassword">Potwierdź nowe hasło</label>
-            <input
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              required
-            />
-          </div>
-          <div class="modal-actions">
-            <button type="button" class="btn-secondary" id="cancelBtn">
-              Anuluj
-            </button>
-            <button type="submit" class="btn-primary">Zmień hasło</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
     <script src="../js/modal.js"></script>
     <script>
-      // Obsługa checkboxów
-      const selectAllCheckbox = document.getElementById("selectAll");
+      // Bulk actions functionality
+      const selectAllCheckbox = document.querySelector(".select-all-checkbox");
       const rowCheckboxes = document.querySelectorAll(".row-checkbox");
-      const bulkChangeTypeBtn = document.getElementById("bulkChangeType");
-      const bulkDeleteBtn = document.getElementById("bulkDelete");
+      const bulkDeleteBtn = document.querySelector(
+        ".bulk-action-btn.bulk-delete"
+      );
 
-      // Zaznacz/odznacz wszystko
+      // Select all functionality
       selectAllCheckbox.addEventListener("change", function () {
         rowCheckboxes.forEach((checkbox) => {
           checkbox.checked = this.checked;
         });
-        updateBulkActionsState();
+        updateBulkActions();
       });
 
-      // Obsługa pojedynczych checkboxów
+      // Individual checkbox functionality
       rowCheckboxes.forEach((checkbox) => {
         checkbox.addEventListener("change", function () {
-          const allChecked = Array.from(rowCheckboxes).every(
-            (cb) => cb.checked
-          );
-          const someChecked = Array.from(rowCheckboxes).some(
-            (cb) => cb.checked
-          );
-
-          selectAllCheckbox.checked = allChecked;
-          selectAllCheckbox.indeterminate = someChecked && !allChecked;
-
-          updateBulkActionsState();
+          updateBulkActions();
+          updateSelectAllState();
         });
       });
 
-      // Włącz/wyłącz przyciski masowych akcji
-      function updateBulkActionsState() {
-        const checkedCount = Array.from(rowCheckboxes).filter(
-          (cb) => cb.checked
-        ).length;
-        bulkChangeTypeBtn.disabled = checkedCount === 0;
-        bulkDeleteBtn.disabled = checkedCount === 0;
+      function updateBulkActions() {
+        const checkedBoxes = document.querySelectorAll(".row-checkbox:checked");
+        bulkDeleteBtn.disabled = checkedBoxes.length === 0;
       }
 
-      // Masowa zmiana typu
-      bulkChangeTypeBtn.addEventListener("click", function () {
-        const checkedPrograms = Array.from(rowCheckboxes)
-          .filter((cb) => cb.checked)
-          .map((cb) => cb.dataset.programId);
+      function updateSelectAllState() {
+        const checkedBoxes = document.querySelectorAll(".row-checkbox:checked");
+        const totalBoxes = rowCheckboxes.length;
 
-        if (checkedPrograms.length > 0) {
-          alert(
-            `Zmiana typu dla ${checkedPrograms.length} programów\n(Funkcja w przygotowaniu)`
-          );
+        if (checkedBoxes.length === 0) {
+          selectAllCheckbox.indeterminate = false;
+          selectAllCheckbox.checked = false;
+        } else if (checkedBoxes.length === totalBoxes) {
+          selectAllCheckbox.indeterminate = false;
+          selectAllCheckbox.checked = true;
+        } else {
+          selectAllCheckbox.indeterminate = true;
+          selectAllCheckbox.checked = false;
         }
-      });
+      }
 
-      // Masowe usuwanie
+      // Bulk delete functionality
       bulkDeleteBtn.addEventListener("click", function () {
-        const checkedPrograms = Array.from(rowCheckboxes)
-          .filter((cb) => cb.checked)
-          .map((cb) => cb.dataset.programId);
+        if (this.disabled) return;
 
-        if (checkedPrograms.length > 0) {
+        const checkedBoxes = document.querySelectorAll(".row-checkbox:checked");
+        if (checkedBoxes.length > 0) {
           if (
             confirm(
-              `Czy na pewno chcesz usunąć ${checkedPrograms.length} programów?`
+              `Czy na pewno chcesz usunąć ${checkedBoxes.length} kuponów?`
             )
           ) {
-            alert(
-              `Usunięto ${checkedPrograms.length} programów\n(Funkcja w przygotowaniu)`
+            // Here you would implement the actual deletion logic
+            console.log(
+              "Deleting coupons:",
+              Array.from(checkedBoxes).map(
+                (cb) => cb.closest(".table-row").dataset.code
+              )
             );
           }
         }
-      });
-
-      // Przyciski akcji w wierszach
-      document.querySelectorAll(".delete-btn").forEach((btn) => {
-        btn.addEventListener("click", function (e) {
-          e.preventDefault();
-          if (confirm("Czy na pewno chcesz usunąć ten program?")) {
-            alert("Program został usunięty\n(Funkcja w przygotowaniu)");
-          }
-        });
       });
 
       // Table sorting functionality
@@ -1066,7 +1055,7 @@
           const sortKey = this.dataset.sort;
           const table = this.closest(".programs-table");
           const tbody = table;
-          const rows = Array.from(tbody.querySelectorAll(".table-row"));
+          const rows = Array.from(tbody.querySelectorAll(".coupons-row-new"));
 
           // Toggle direction if same column
           if (currentSort.column === sortKey) {
@@ -1090,24 +1079,19 @@
             let aVal = a.dataset[sortKey] || "";
             let bVal = b.dataset[sortKey] || "";
 
-            // Handle numeric sorting for songs count
-            if (sortKey === "songs") {
-              aVal = parseInt(aVal) || 0;
-              bVal = parseInt(bVal) || 0;
+            // Handle different data types
+            if (sortKey === "amount" || sortKey === "usage") {
+              aVal = parseFloat(aVal) || 0;
+              bVal = parseFloat(bVal) || 0;
             } else {
-              // Normalize Polish characters for comparison
               aVal = aVal.toLowerCase();
               bVal = bVal.toLowerCase();
             }
 
             if (currentSort.direction === "asc") {
-              return sortKey === "songs"
-                ? aVal - bVal
-                : aVal.localeCompare(bVal, "pl");
+              return aVal > bVal ? 1 : -1;
             } else {
-              return sortKey === "songs"
-                ? bVal - aVal
-                : bVal.localeCompare(aVal, "pl");
+              return aVal < bVal ? 1 : -1;
             }
           });
 

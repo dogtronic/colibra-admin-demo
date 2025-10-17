@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pulpit - Colibra</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <aside class="sidebar">
@@ -207,6 +208,27 @@
         </div>
 
         <div class="nav-section">
+          <div class="nav-section-title">MARKETING</div>
+          <a href="coupons.html" class="nav-item">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                ></path>
+                <polyline points="3.27,6.96 12,12.01 20.73,6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </span>
+            <span>Kupony promocyjne</span>
+          </a>
+        </div>
+
+        <div class="nav-section">
           <div class="nav-section-title">UŻYTKOWNICY</div>
           <a href="users.html" class="nav-item">
             <span class="icon">
@@ -374,265 +396,172 @@
         </div>
       </div>
 
-      <div class="programs-section">
-        <h2>Ostatnio zarejestrowani użytkownicy</h2>
-        <div class="programs-table">
-          <div class="table-header users-header dashboard">
-            <div
-              class="table-cell sortable"
-              data-sort="firstname"
-              title="Kliknij aby sortować według imienia"
-            >
-              <span>Imię</span>
-              <svg
-                class="sort-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
+      <!-- Charts Section -->
+      <div class="charts-section">
+        <div class="charts-grid">
+          <!-- User Growth Chart -->
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3>Wzrost użytkowników</h3>
+              <p>Rejestracje w ostatnich 30 dniach</p>
             </div>
-            <div
-              class="table-cell sortable"
-              data-sort="lastname"
-              title="Kliknij aby sortować według nazwiska"
-            >
-              <span>Nazwisko</span>
-              <svg
-                class="sort-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-            <div
-              class="table-cell sortable"
-              data-sort="email"
-              title="Kliknij aby sortować według adresu email"
-            >
-              <span>Email</span>
-              <svg
-                class="sort-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-            <div
-              class="table-cell sortable"
-              data-sort="date"
-              title="Kliknij aby sortować według daty utworzenia"
-            >
-              <span>Data utworzenia</span>
-              <svg
-                class="sort-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
+            <div class="chart-wrapper">
+              <canvas id="userGrowthChart"></canvas>
             </div>
           </div>
 
-          <a
-            href="user-details.html"
-            class="table-row users-row dashboard"
-            data-firstname="Anna"
-            data-lastname="Kowalska"
-            data-email="anna.kowalska@email.pl"
-            data-date="2025-10-10"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">👤</div>
-                <span>Anna</span>
-              </div>
+          <!-- Session Duration Chart -->
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3>Czas sesji medytacyjnych</h3>
+              <p>Rozkład długości sesji użytkowników</p>
             </div>
-            <div class="table-cell">Kowalska</div>
-            <div class="table-cell">anna.kowalska@email.pl</div>
-            <div class="table-cell">2025-10-10</div>
-          </a>
+            <div class="chart-wrapper">
+              <canvas id="sessionDurationChart"></canvas>
+            </div>
+          </div>
 
-          <a
-            href="user-details.html"
-            class="table-row users-row dashboard"
-            data-firstname="Marek"
-            data-lastname="Nowak"
-            data-email="marek.nowak@email.pl"
-            data-date="2025-10-09"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">👤</div>
-                <span>Marek</span>
-              </div>
+          <!-- User Activity Chart -->
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3>Aktywność w ciągu dnia</h3>
+              <p>Godziny największej aktywności</p>
             </div>
-            <div class="table-cell">Nowak</div>
-            <div class="table-cell">marek.nowak@email.pl</div>
-            <div class="table-cell">2025-10-09</div>
-          </a>
+            <div class="chart-wrapper">
+              <canvas id="activityChart"></canvas>
+            </div>
+          </div>
 
-          <a
-            href="user-details.html"
-            class="table-row users-row dashboard"
-            data-firstname="Joanna"
-            data-lastname="Wiśniewska"
-            data-email="joanna.wisniewska@email.pl"
-            data-date="2025-10-09"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">👤</div>
-                <span>Joanna</span>
-              </div>
+          <!-- Popular Categories Stats -->
+          <div class="categories-stats-container">
+            <div class="chart-header">
+              <h3>Najpopularniejsze kategorie</h3>
+              <p>Najczęściej odtwarzane treści</p>
             </div>
-            <div class="table-cell">Wiśniewska</div>
-            <div class="table-cell">joanna.wisniewska@email.pl</div>
-            <div class="table-cell">2025-10-09</div>
-          </a>
+            <div class="categories-stats-grid">
+              <div class="category-stat-item">
+                <div class="category-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                </div>
+                <div class="category-info">
+                  <div class="category-name">Relaksacja</div>
+                  <div class="category-count">245 odtworzeń</div>
+                  <div class="category-trend positive">+12%</div>
+                </div>
+              </div>
 
-          <a
-            href="user-details.html"
-            class="table-row users-row dashboard"
-            data-firstname="Piotr"
-            data-lastname="Zieliński"
-            data-email="piotr.zielinski@email.pl"
-            data-date="2025-10-08"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">👤</div>
-                <span>Piotr</span>
+              <div class="category-stat-item">
+                <div class="category-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="category-info">
+                  <div class="category-name">Medytacja</div>
+                  <div class="category-count">189 odtworzeń</div>
+                  <div class="category-trend positive">+8%</div>
+                </div>
               </div>
-            </div>
-            <div class="table-cell">Zieliński</div>
-            <div class="table-cell">piotr.zielinski@email.pl</div>
-            <div class="table-cell">2025-10-08</div>
-          </a>
 
-          <a
-            href="user-details.html"
-            class="table-row users-row dashboard"
-            data-firstname="Katarzyna"
-            data-lastname="Lewandowska"
-            data-email="katarzyna.lewandowska@email.pl"
-            data-date="2025-10-08"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">👤</div>
-                <span>Katarzyna</span>
+              <div class="category-stat-item">
+                <div class="category-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                    ></path>
+                    <polyline points="3.27,6.96 12,12.01 20.73,6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
+                </div>
+                <div class="category-info">
+                  <div class="category-name">Sen</div>
+                  <div class="category-count">156 odtworzeń</div>
+                  <div class="category-trend positive">+15%</div>
+                </div>
               </div>
-            </div>
-            <div class="table-cell">Lewandowska</div>
-            <div class="table-cell">katarzyna.lewandowska@email.pl</div>
-            <div class="table-cell">2025-10-08</div>
-          </a>
 
-          <a
-            href="user-details.html"
-            class="table-row users-row dashboard"
-            data-firstname="Michał"
-            data-lastname="Kamiński"
-            data-email="michal.kaminski@email.pl"
-            data-date="2025-10-07"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">👤</div>
-                <span>Michał</span>
+              <div class="category-stat-item">
+                <div class="category-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12,6 12,12 16,14"></polyline>
+                  </svg>
+                </div>
+                <div class="category-info">
+                  <div class="category-name">Koncentracja</div>
+                  <div class="category-count">134 odtworzeń</div>
+                  <div class="category-trend negative">-3%</div>
+                </div>
               </div>
-            </div>
-            <div class="table-cell">Kamiński</div>
-            <div class="table-cell">michal.kaminski@email.pl</div>
-            <div class="table-cell">2025-10-07</div>
-          </a>
 
-          <a
-            href="user-details.html"
-            class="table-row users-row dashboard"
-            data-firstname="Magdalena"
-            data-lastname="Wojciechowska"
-            data-email="magdalena.wojciechowska@email.pl"
-            data-date="2025-10-07"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">👤</div>
-                <span>Magdalena</span>
+              <div class="category-stat-item">
+                <div class="category-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                </div>
+                <div class="category-info">
+                  <div class="category-name">Motywacja</div>
+                  <div class="category-count">98 odtworzeń</div>
+                  <div class="category-trend positive">+22%</div>
+                </div>
               </div>
-            </div>
-            <div class="table-cell">Wojciechowska</div>
-            <div class="table-cell">magdalena.wojciechowska@email.pl</div>
-            <div class="table-cell">2025-10-07</div>
-          </a>
 
-          <a
-            href="user-details.html"
-            class="table-row users-row dashboard"
-            data-firstname="Tomasz"
-            data-lastname="Dąbrowski"
-            data-email="tomasz.dabrowski@email.pl"
-            data-date="2025-10-06"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">👤</div>
-                <span>Tomasz</span>
+              <div class="category-stat-item">
+                <div class="category-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="category-info">
+                  <div class="category-name">Dobrostan</div>
+                  <div class="category-count">87 odtworzeń</div>
+                  <div class="category-trend positive">+18%</div>
+                </div>
               </div>
             </div>
-            <div class="table-cell">Dąbrowski</div>
-            <div class="table-cell">tomasz.dabrowski@email.pl</div>
-            <div class="table-cell">2025-10-06</div>
-          </a>
-
-          <a
-            href="user-details.html"
-            class="table-row users-row dashboard"
-            data-firstname="Agnieszka"
-            data-lastname="Kozłowska"
-            data-email="agnieszka.kozlowska@email.pl"
-            data-date="2025-10-06"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">👤</div>
-                <span>Agnieszka</span>
-              </div>
-            </div>
-            <div class="table-cell">Kozłowska</div>
-            <div class="table-cell">agnieszka.kozlowska@email.pl</div>
-            <div class="table-cell">2025-10-06</div>
-          </a>
-
-          <a
-            href="user-details.html"
-            class="table-row users-row dashboard"
-            data-firstname="Paweł"
-            data-lastname="Jankowski"
-            data-email="pawel.jankowski@email.pl"
-            data-date="2025-10-05"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div class="program-icon">👤</div>
-                <span>Paweł</span>
-              </div>
-            </div>
-            <div class="table-cell">Jankowski</div>
-            <div class="table-cell">pawel.jankowski@email.pl</div>
-            <div class="table-cell">2025-10-05</div>
-          </a>
+          </div>
         </div>
       </div>
     </main>
@@ -687,6 +616,197 @@
           // Re-append sorted rows
           rows.forEach((row) => tbody.appendChild(row));
         });
+      });
+
+      // Charts initialization
+      document.addEventListener("DOMContentLoaded", function () {
+        // Wait a bit to ensure all elements are rendered
+        setTimeout(function () {
+          // User Growth Chart
+          const userGrowthCtx = document
+            .getElementById("userGrowthChart")
+            .getContext("2d");
+          new Chart(userGrowthCtx, {
+            type: "line",
+            data: {
+              labels: [
+                "1 sty",
+                "5 sty",
+                "10 sty",
+                "15 sty",
+                "20 sty",
+                "25 sty",
+                "30 sty",
+              ],
+              datasets: [
+                {
+                  label: "Nowi użytkownicy",
+                  data: [12, 19, 8, 25, 18, 22, 15],
+                  borderColor: "#c3619b",
+                  backgroundColor: "rgba(195, 97, 155, 0.1)",
+                  borderWidth: 3,
+                  fill: true,
+                  tension: 0.4,
+                  pointBackgroundColor: "#c3619b",
+                  pointBorderColor: "#fff",
+                  pointBorderWidth: 2,
+                  pointRadius: 6,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: {
+                  display: false,
+                },
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  grid: {
+                    color: "rgba(0,0,0,0.05)",
+                  },
+                  ticks: {
+                    color: "#666",
+                  },
+                },
+                x: {
+                  grid: {
+                    display: false,
+                  },
+                  ticks: {
+                    color: "#666",
+                  },
+                },
+              },
+            },
+          });
+
+          // Session Duration Chart
+          const sessionDurationCtx = document
+            .getElementById("sessionDurationChart")
+            .getContext("2d");
+          new Chart(sessionDurationCtx, {
+            type: "bar",
+            data: {
+              labels: [
+                "5-10 min",
+                "10-15 min",
+                "15-20 min",
+                "20-30 min",
+                "30-45 min",
+                "45+ min",
+              ],
+              datasets: [
+                {
+                  label: "Liczba sesji",
+                  data: [45, 78, 95, 62, 38, 22],
+                  backgroundColor: [
+                    "rgba(195, 97, 155, 0.8)",
+                    "rgba(170, 118, 173, 0.8)",
+                    "rgba(205, 169, 226, 0.8)",
+                    "rgba(255, 165, 165, 0.8)",
+                    "rgba(195, 97, 155, 0.6)",
+                    "rgba(170, 118, 173, 0.6)",
+                  ],
+                  borderColor: "#c3619b",
+                  borderWidth: 1,
+                  borderRadius: 6,
+                  borderSkipped: false,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: {
+                  display: false,
+                },
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  grid: {
+                    color: "rgba(0,0,0,0.05)",
+                  },
+                  ticks: {
+                    color: "#666",
+                  },
+                },
+                x: {
+                  grid: {
+                    display: false,
+                  },
+                  ticks: {
+                    color: "#666",
+                    maxRotation: 45,
+                  },
+                },
+              },
+            },
+          });
+
+          // Activity Chart
+          const activityCtx = document
+            .getElementById("activityChart")
+            .getContext("2d");
+          new Chart(activityCtx, {
+            type: "bar",
+            data: {
+              labels: [
+                "6:00",
+                "9:00",
+                "12:00",
+                "15:00",
+                "18:00",
+                "21:00",
+                "24:00",
+              ],
+              datasets: [
+                {
+                  label: "Aktywność",
+                  data: [15, 45, 35, 25, 60, 80, 30],
+                  backgroundColor: "rgba(195, 97, 155, 0.8)",
+                  borderColor: "#c3619b",
+                  borderWidth: 0,
+                  borderRadius: 8,
+                  borderSkipped: false,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: {
+                  display: false,
+                },
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  grid: {
+                    color: "rgba(0,0,0,0.05)",
+                  },
+                  ticks: {
+                    color: "#666",
+                  },
+                },
+                x: {
+                  grid: {
+                    display: false,
+                  },
+                  ticks: {
+                    color: "#666",
+                  },
+                },
+              },
+            },
+          });
+        }, 100);
       });
     </script>
   </body>

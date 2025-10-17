@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Użytkownicy - Colibra</title>
+    <title>Szczegóły kuponu - Colibra</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
@@ -208,7 +208,7 @@
 
         <div class="nav-section">
           <div class="nav-section-title">MARKETING</div>
-          <a href="coupons.html" class="nav-item">
+          <a href="coupons.html" class="nav-item active">
             <span class="icon">
               <svg
                 viewBox="0 0 24 24"
@@ -229,7 +229,7 @@
 
         <div class="nav-section">
           <div class="nav-section-title">UŻYTKOWNICY</div>
-          <a href="users.html" class="nav-item active">
+          <a href="users.html" class="nav-item">
             <span class="icon">
               <svg
                 viewBox="0 0 24 24"
@@ -333,389 +333,369 @@
 
     <main class="main-content">
       <div class="content-header">
-        <h1>Zarządzanie użytkownikami</h1>
-      </div>
-
-      <div class="stats-grid">
-        <div class="stat-box">
-          <div class="stat-icon">
+        <a href="coupons.html" class="back-link">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          Powrót do kuponów
+        </a>
+        <h1>Szczegóły kuponu</h1>
+        <div class="header-actions">
+          <a href="add-coupon.html?id=1" class="btn-secondary">
             <svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
             >
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              <path
+                d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+              ></path>
+              <path
+                d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+              ></path>
             </svg>
-          </div>
-          <div class="stat-content">
-            <div class="stat-number">1,247</div>
-            <div class="stat-label">Łączna liczba użytkowników</div>
-          </div>
-        </div>
-
-        <div class="stat-box">
-          <div class="stat-icon">
+            Edytuj kupon
+          </a>
+          <button class="btn-primary" id="duplicateCoupon">
             <svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
             >
-              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="8.5" cy="7" r="4"></circle>
-              <polyline points="17 11 19 13 23 9"></polyline>
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+              ></path>
             </svg>
-          </div>
-          <div class="stat-content">
-            <div class="stat-number">87</div>
-            <div class="stat-label">Nowi użytkownicy (ostatnie 30 dni)</div>
-          </div>
-        </div>
-
-        <div class="stat-box">
-          <div class="stat-icon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
-          <div class="stat-content">
-            <div class="stat-number">542</div>
-            <div class="stat-label">Aktywni w ostatnim tygodniu</div>
-          </div>
+            Duplikuj kupon
+          </button>
         </div>
       </div>
 
-      <div class="programs-section">
-        <h2>Lista użytkowników</h2>
-        <div class="programs-table">
-          <div class="table-header users-header">
-            <div
-              class="table-cell sortable"
-              data-sort="user"
-              title="Kliknij aby sortować według imienia i nazwiska"
-            >
-              <span>Użytkownik</span>
+      <div class="details-container">
+        <div class="details-card">
+          <div class="details-header">
+            <div class="coupon-icon-large">
               <svg
-                class="sort-icon"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
               >
-                <polyline points="6 9 12 15 18 9"></polyline>
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                ></path>
+                <polyline points="3.27,6.96 12,12.01 20.73,6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
               </svg>
             </div>
-            <div
-              class="table-cell sortable"
-              data-sort="date"
-              title="Kliknij aby sortować według daty rejestracji"
-            >
-              <span>Data rejestracji</span>
-              <svg
-                class="sort-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-            <div
-              class="table-cell sortable"
-              data-sort="email"
-              title="Kliknij aby sortować według adresu email"
-            >
-              <span>Email</span>
-              <svg
-                class="sort-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-            <div
-              class="table-cell sortable"
-              data-sort="gender"
-              title="Kliknij aby sortować według płci"
-            >
-              <span>Płeć</span>
-              <svg
-                class="sort-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-            <div
-              class="table-cell sortable"
-              data-sort="narrator"
-              title="Kliknij aby sortować według wybranego narratora"
-            >
-              <span>Narrator</span>
-              <svg
-                class="sort-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-            <div
-              class="table-cell sortable"
-              data-sort="goals"
-              title="Kliknij aby sortować według liczby celów"
-            >
-              <span>Cele</span>
-              <svg
-                class="sort-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
+            <div class="coupon-header-info">
+              <h2>WELCOME20</h2>
+              <p class="coupon-description">
+                Rabat powitalny dla nowych użytkowników
+              </p>
+              <div class="detail-badges">
+                <span class="badge badge-percentage">Procentowy</span>
+                <span class="badge badge-active">Aktywny</span>
+                <span class="badge badge-popular">Popularny</span>
+              </div>
             </div>
           </div>
 
-          <div
-            class="table-row users-row"
-            data-user="Anna Kowalska"
-            data-date="2024-01-15"
-            data-email="anna.kowalska@example.com"
-            data-gender="Kobieta"
-            data-narrator="Michał Nowak"
-            data-goals="3"
-            data-programs="3"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div>
-                  <span>Anna Nowak</span>
+          <div class="details-grid">
+            <!-- Podstawowe informacje -->
+            <div class="detail-section">
+              <h3>Podstawowe informacje</h3>
+              <div class="detail-item">
+                <div class="detail-label">Kod kuponu:</div>
+                <div class="detail-value">WELCOME20</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Typ rabatu:</div>
+                <div class="detail-value">Procentowy</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Wartość rabatu:</div>
+                <div class="detail-value">20%</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Minimalna kwota:</div>
+                <div class="detail-value">50 zł</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Maksymalny rabat:</div>
+                <div class="detail-value">200 zł</div>
+              </div>
+            </div>
+
+            <!-- Statystyki użycia -->
+            <div class="detail-section">
+              <h3>Statystyki użycia</h3>
+              <div class="detail-item">
+                <div class="detail-label">Wykorzystane kupony:</div>
+                <div class="detail-value">245 / 1000</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Procent wykorzystania:</div>
+                <div class="detail-value">
+                  <div class="usage-bar">
+                    <div class="usage-fill" style="width: 24.5%"></div>
+                  </div>
+                  <span>24.5%</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Łączna zaoszczędzona kwota:</div>
+                <div class="detail-value">4,890 zł</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Średnia zaoszczędzona kwota:</div>
+                <div class="detail-value">19.96 zł</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ostatnie użycie:</div>
+                <div class="detail-value">2 dni temu</div>
+              </div>
+            </div>
+
+            <!-- Daty ważności -->
+            <div class="detail-section">
+              <h3>Daty ważności</h3>
+              <div class="detail-item">
+                <div class="detail-label">Data utworzenia:</div>
+                <div class="detail-value">15.01.2024</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Data rozpoczęcia:</div>
+                <div class="detail-value">15.01.2024</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Data wygaśnięcia:</div>
+                <div class="detail-value">31.12.2024</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Pozostało dni:</div>
+                <div class="detail-value">
+                  <span class="badge badge-warning">45 dni</span>
                 </div>
               </div>
             </div>
-            <div class="table-cell">2024-01-15</div>
-            <div class="table-cell">anna.kowalska@example.com</div>
-            <div class="table-cell">Kobieta</div>
-            <div class="table-cell">Michał Nowak</div>
-            <div class="table-cell">3</div>
+
+            <!-- Ograniczenia -->
+            <div class="detail-section">
+              <h3>Ograniczenia</h3>
+              <div class="detail-item">
+                <div class="detail-label">Limit użyć na użytkownika:</div>
+                <div class="detail-value">1</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Zastosowanie:</div>
+                <div class="detail-value">Wszystkie produkty</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Dostępność:</div>
+                <div class="detail-value">Wszyscy użytkownicy</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Darmowa dostawa:</div>
+                <div class="detail-value">Nie</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Tylko pojedyncze użycie:</div>
+                <div class="detail-value">Tak</div>
+              </div>
+            </div>
           </div>
 
-          <div
-            class="table-row users-row"
-            data-user="Piotr Wiśniewski"
-            data-date="2024-02-20"
-            data-email="piotr.wisniewski@example.com"
-            data-gender="Mężczyzna"
-            data-narrator="Anna Lewandowska"
-            data-goals="2"
-            data-programs="1"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div>
-                  <span>Piotr Wiśniewski</span>
-                </div>
-              </div>
+          <!-- Opis -->
+          <div class="detail-section full-width">
+            <h3>Opis kuponu</h3>
+            <div class="detail-text">
+              Kupon powitalny przeznaczony dla nowych użytkowników aplikacji
+              Colibra. Oferuje 20% rabatu na pierwszy zakup, z maksymalną kwotą
+              rabatu 200 zł. Kupon może być użyty tylko raz przez każdego
+              użytkownika i nie może być łączony z innymi promocjami. Minimalna
+              kwota zamówienia to 50 zł.
             </div>
-            <div class="table-cell">2024-02-20</div>
-            <div class="table-cell">piotr.wisniewski@example.com</div>
-            <div class="table-cell">Mężczyzna</div>
-            <div class="table-cell">Anna Lewandowska</div>
-            <div class="table-cell">2</div>
           </div>
+        </div>
 
-          <div
-            class="table-row users-row"
-            data-user="Maria Nowak"
-            data-date="2024-03-10"
-            data-email="maria.nowak@example.com"
-            data-gender="Kobieta"
-            data-narrator="Michał Nowak"
-            data-goals="4"
-            data-programs="5"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div>
-                  <span>Maria Nowak</span>
+        <!-- Historia użycia -->
+        <div class="details-card">
+          <div class="detail-section">
+            <h3>Ostatnie użycia kuponu</h3>
+            <div class="usage-history">
+              <div class="usage-item">
+                <div class="usage-user">
+                  <div class="user-avatar-small">A</div>
+                  <div class="user-info">
+                    <div class="user-name">Anna Kowalska</div>
+                    <div class="user-email">anna.kowalska@example.com</div>
+                  </div>
+                </div>
+                <div class="usage-details">
+                  <div class="usage-amount">-45.60 zł</div>
+                  <div class="usage-date">2 dni temu</div>
+                </div>
+              </div>
+
+              <div class="usage-item">
+                <div class="usage-user">
+                  <div class="user-avatar-small">P</div>
+                  <div class="user-info">
+                    <div class="user-name">Piotr Nowak</div>
+                    <div class="user-email">piotr.nowak@example.com</div>
+                  </div>
+                </div>
+                <div class="usage-details">
+                  <div class="usage-amount">-32.40 zł</div>
+                  <div class="usage-date">5 dni temu</div>
+                </div>
+              </div>
+
+              <div class="usage-item">
+                <div class="usage-user">
+                  <div class="user-avatar-small">M</div>
+                  <div class="user-info">
+                    <div class="user-name">Maria Wiśniewska</div>
+                    <div class="user-email">maria.wisniewska@example.com</div>
+                  </div>
+                </div>
+                <div class="usage-details">
+                  <div class="usage-amount">-28.80 zł</div>
+                  <div class="usage-date">1 tydzień temu</div>
+                </div>
+              </div>
+
+              <div class="usage-item">
+                <div class="usage-user">
+                  <div class="user-avatar-small">T</div>
+                  <div class="user-info">
+                    <div class="user-name">Tomasz Lewandowski</div>
+                    <div class="user-email">tomasz.lewandowski@example.com</div>
+                  </div>
+                </div>
+                <div class="usage-details">
+                  <div class="usage-amount">-67.20 zł</div>
+                  <div class="usage-date">2 tygodnie temu</div>
+                </div>
+              </div>
+
+              <div class="usage-item">
+                <div class="usage-user">
+                  <div class="user-avatar-small">K</div>
+                  <div class="user-info">
+                    <div class="user-name">Katarzyna Zielińska</div>
+                    <div class="user-email">
+                      katarzyna.zielinska@example.com
+                    </div>
+                  </div>
+                </div>
+                <div class="usage-details">
+                  <div class="usage-amount">-19.60 zł</div>
+                  <div class="usage-date">3 tygodnie temu</div>
                 </div>
               </div>
             </div>
-            <div class="table-cell">2024-03-10</div>
-            <div class="table-cell">maria.nowak@example.com</div>
-            <div class="table-cell">Kobieta</div>
-            <div class="table-cell">Michał Nowak</div>
-            <div class="table-cell">4</div>
           </div>
+        </div>
 
-          <div
-            class="table-row users-row"
-            data-user="Jan Kowalczyk"
-            data-date="2024-05-15"
-            data-email="jan.kowalczyk@example.com"
-            data-gender="Mężczyzna"
-            data-narrator="Anna Lewandowska"
-            data-goals="1"
-            data-programs="0"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div>
-                  <span>Jan Kowalczyk</span>
-                </div>
-              </div>
+        <!-- Statystyki wykresowe -->
+        <div class="details-card">
+          <div class="detail-section">
+            <h3>Statystyki użycia w czasie</h3>
+            <div class="coupon-chart-container">
+              <canvas id="usageChart" width="400" height="200"></canvas>
             </div>
-            <div class="table-cell">2024-05-15</div>
-            <div class="table-cell">jan.kowalczyk@example.com</div>
-            <div class="table-cell">Mężczyzna</div>
-            <div class="table-cell">Anna Lewandowska</div>
-            <div class="table-cell">1</div>
-          </div>
-
-          <div
-            class="table-row users-row"
-            data-user="Katarzyna Zielińska"
-            data-date="2024-06-01"
-            data-email="katarzyna.zielinska@example.com"
-            data-gender="Kobieta"
-            data-narrator="Michał Nowak"
-            data-goals="2"
-            data-programs="2"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div>
-                  <span>Katarzyna Zielińska</span>
-                </div>
-              </div>
-            </div>
-            <div class="table-cell">2024-06-01</div>
-            <div class="table-cell">katarzyna.zielinska@example.com</div>
-            <div class="table-cell">Kobieta</div>
-            <div class="table-cell">Michał Nowak</div>
-            <div class="table-cell">2</div>
-          </div>
-
-          <div
-            class="table-row users-row"
-            data-user="Tomasz Szymański"
-            data-date="2024-07-12"
-            data-email="tomasz.szymanski@example.com"
-            data-gender="Mężczyzna"
-            data-narrator="Piotr Kamiński"
-            data-goals="3"
-            data-programs="4"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div>
-                  <span>Tomasz Szymański</span>
-                </div>
-              </div>
-            </div>
-            <div class="table-cell">2024-07-12</div>
-            <div class="table-cell">tomasz.szymanski@example.com</div>
-            <div class="table-cell">Mężczyzna</div>
-            <div class="table-cell">Piotr Kamiński</div>
-            <div class="table-cell">3</div>
-          </div>
-
-          <div
-            class="table-row users-row"
-            data-user="Magdalena Wójcik"
-            data-date="2024-08-05"
-            data-email="magdalena.wojcik@example.com"
-            data-gender="Kobieta"
-            data-narrator="Anna Lewandowska"
-            data-goals="1"
-            data-programs="1"
-          >
-            <div class="table-cell">
-              <div class="program-info">
-                <div>
-                  <span>Magdalena Wójcik</span>
-                </div>
-              </div>
-            </div>
-            <div class="table-cell">2024-08-05</div>
-            <div class="table-cell">magdalena.wojcik@example.com</div>
-            <div class="table-cell">Kobieta</div>
-            <div class="table-cell">Anna Lewandowska</div>
-            <div class="table-cell">1</div>
           </div>
         </div>
       </div>
     </main>
+
     <script src="../js/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-      // Table sorting functionality
-      const sortableHeaders = document.querySelectorAll(".sortable");
-      let currentSort = { column: null, direction: "asc" };
-
-      sortableHeaders.forEach((header) => {
-        header.style.cursor = "pointer";
-
-        header.addEventListener("click", function () {
-          const sortKey = this.dataset.sort;
-          const table = this.closest(".programs-table");
-          const tbody = table;
-          const rows = Array.from(tbody.querySelectorAll(".table-row"));
-
-          // Toggle direction if same column
-          if (currentSort.column === sortKey) {
-            currentSort.direction =
-              currentSort.direction === "asc" ? "desc" : "asc";
-          } else {
-            currentSort.direction = "asc";
+      // Duplicate coupon functionality
+      document
+        .getElementById("duplicateCoupon")
+        .addEventListener("click", function () {
+          if (confirm("Czy chcesz utworzyć kopię tego kuponu?")) {
+            // Here you would implement the duplication logic
+            window.location.href = "add-coupon.html?duplicate=1";
           }
-          currentSort.column = sortKey;
+        });
 
-          // Remove all sort classes and reset icons
-          sortableHeaders.forEach((h) => {
-            h.classList.remove("sort-asc", "sort-desc");
-          });
-
-          // Add current sort class
-          this.classList.add(`sort-${currentSort.direction}`);
-
-          // Sort rows
-          rows.sort((a, b) => {
-            let aVal = a.dataset[sortKey] || "";
-            let bVal = b.dataset[sortKey] || "";
-
-            // Normalize Polish characters for comparison
-            aVal = aVal.toLowerCase();
-            bVal = bVal.toLowerCase();
-
-            if (currentSort.direction === "asc") {
-              return aVal.localeCompare(bVal, "pl");
-            } else {
-              return bVal.localeCompare(aVal, "pl");
-            }
-          });
-
-          // Re-append sorted rows
-          rows.forEach((row) => tbody.appendChild(row));
+      // Usage chart
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document.getElementById("usageChart").getContext("2d");
+        new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: [
+              "Sty",
+              "Lut",
+              "Mar",
+              "Kwi",
+              "Maj",
+              "Cze",
+              "Lip",
+              "Sie",
+              "Wrz",
+              "Paź",
+              "Lis",
+              "Gru",
+            ],
+            datasets: [
+              {
+                label: "Liczba użyć",
+                data: [12, 19, 8, 25, 18, 22, 15, 28, 35, 42, 38, 45],
+                borderColor: "#c3619b",
+                backgroundColor: "rgba(195, 97, 155, 0.1)",
+                borderWidth: 3,
+                fill: true,
+                tension: 0.4,
+                pointBackgroundColor: "#c3619b",
+                pointBorderColor: "#fff",
+                pointBorderWidth: 2,
+                pointRadius: 6,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                display: false,
+              },
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                grid: {
+                  color: "rgba(0,0,0,0.05)",
+                },
+                ticks: {
+                  color: "#666",
+                },
+              },
+              x: {
+                grid: {
+                  display: false,
+                },
+                ticks: {
+                  color: "#666",
+                },
+              },
+            },
+          },
         });
       });
     </script>

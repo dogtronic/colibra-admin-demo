@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dodaj Kupon - Colibra</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">
+        <svg
+          width="1em"
+          height="1em"
+          viewBox="0 0 124 124"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="logo-icon"
+        >
+          <path
+            d="M94.1108 23.5284C87.5387 18.1409 80.3175 14.2544 71.6439 16.8102C67.7818 17.9462 64.5282 19.4472 61.8264 22.5872C69.3315 26.425 76.853 31.9261 84.1228 39.1311C79.7009 53.5735 61.8669 64.3728 36.1627 67.5534L13.8337 105.996L16.6573 108C21.9393 101.818 31.7001 97.9798 42.037 93.9148C52.5199 89.7931 63.3517 85.5334 70.1267 78.3771C78.9138 69.095 80.9504 57.0137 82.5812 47.3097C83.3196 42.9283 84.0498 39.1067 85.1046 36.4617C88.5124 27.8936 93.5347 27.285 94.411 27.0011L113.162 26.425C114.736 26.3439 116.245 25.784 117.503 24.8266L119.004 23.6744L94.1108 23.5365V23.5284Z"
+            fill="#fff8f0"
+          ></path>
+          <path
+            d="M83.3193 38.8876C46.0044 26.7657 16.5029 39.8774 8.97339 68.1294C48.9496 70.9773 78.2645 58.2307 84.1064 39.131L83.3112 38.8876H83.3193Z"
+            fill="url(#paint0_linear_88_13)"
+          ></path>
+          <path
+            d="M84.1148 39.1311C56.0089 11.2767 24.1139 8.64787 4 30.8713C37.7693 51.2043 70.8002 54.0684 84.1148 39.1311Z"
+            fill="url(#paint1_linear_88_13)"
+          ></path>
+          <defs>
+            <linearGradient
+              id="paint0_linear_88_13"
+              x1="7.3272"
+              y1="56.0142"
+              x2="84.9725"
+              y2="45.3781"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#CDA9E2" stop-opacity="0.3"></stop>
+              <stop offset="1" stop-color="#CDA9E2"></stop>
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear_88_13"
+              x1="8.00944"
+              y1="19.3856"
+              x2="82.0327"
+              y2="45.1487"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FFA5A5" stop-opacity="0.3"></stop>
+              <stop offset="1" stop-color="#FFA5A5"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+        <h1>Colibra</h1>
+      </div>
+
+      <div class="nav-menu">
+        <div class="nav-section">
+          <div class="nav-section-title">PRZEGLĄD</div>
+          <a href="dashboard.html" class="nav-item">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </span>
+            <span>Pulpit</span>
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-title">TREŚCI MEDYTACYJNE</div>
+          <a href="songs.html" class="nav-item">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M9 18V5l12-2v13"></path>
+                <circle cx="6" cy="18" r="3"></circle>
+                <circle cx="18" cy="16" r="3"></circle>
+              </svg>
+            </span>
+            <span>Utwory</span>
+          </a>
+          <a href="programs.html" class="nav-item">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                <polyline points="17 2 12 7 7 2"></polyline>
+              </svg>
+            </span>
+            <span>Programy</span>
+          </a>
+          <a href="categories.html" class="nav-item">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </span>
+            <span>Kategorie</span>
+          </a>
+          <a href="song-types.html" class="nav-item">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                ></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+            </span>
+            <span>Typy utworów</span>
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-title">PERSONALIZACJA</div>
+          <a href="keywords.html" class="nav-item">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+            <span>Słowa kluczowe</span>
+          </a>
+          <a href="welcome-texts.html" class="nav-item">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M3 12h18"></path>
+                <path d="M3 6h18"></path>
+                <path d="M3 18h18"></path>
+              </svg>
+            </span>
+            <span>Teksty powitalne</span>
+          </a>
+          <a href="goals.html" class="nav-item">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </span>
+            <span>Cele</span>
+          </a>
+          <a href="narrators.html" class="nav-item">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                ></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+              </svg>
+            </span>
+            <span>Narratorzy</span>
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-title">MARKETING</div>
+          <a href="coupons.html" class="nav-item active">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27,6.96 12,12.01 20.73,6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </span>
+            <span>Kupony promocyjne</span>
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-title">UŻYTKOWNICY</div>
+          <a href="users.html" class="nav-item">
+            <span class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </span>
+            <span>Użytkownicy</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="change-password-btn" id="changePasswordBtn">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          Zmień hasło
+        </button>
+      </div>
+    </aside>
+
+    <!-- Modal zmiany hasła -->
+    <div id="changePasswordModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Zmiana hasła</h2>
+          <button class="modal-close" id="closeModal">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <form class="modal-form" id="changePasswordForm">
+          <div class="form-group">
+            <label for="currentPassword">Aktualne hasło *</label>
+            <input
+              type="password"
+              id="currentPassword"
+              name="currentPassword"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="newPassword">Nowe hasło *</label>
+            <input
+              type="password"
+              id="newPassword"
+              name="newPassword"
+              required
+              minlength="8"
+            />
+            <small class="form-hint">Minimum 8 znaków</small>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Powtórz nowe hasło *</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+            />
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn-secondary" id="cancelBtn">
+              Anuluj
+            </button>
+            <button type="submit" class="btn-primary">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Zmień hasło
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <div class="content-header">
+        <h1>Dodaj nowy kupon promocyjny</h1>
+      </div>
+
+      <div class="form-container">
+        <form class="program-form" id="couponForm">
+          <!-- Podstawowe informacje -->
+          <div class="form-section">
+            <h3>Podstawowe informacje</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="coupon-code">Kod kuponu *</label>
+                <input
+                  type="text"
+                  id="coupon-code"
+                  name="coupon-code"
+                  placeholder="np. WELCOME20"
+                  required
+                  maxlength="20"
+                />
+                <small class="form-hint">Kod, który użytkownicy będą wpisywać podczas zakupu</small>
+              </div>
+
+              <div class="form-group">
+                <label for="coupon-description">Opis kuponu</label>
+                <input
+                  type="text"
+                  id="coupon-description"
+                  name="coupon-description"
+                  placeholder="np. Rabat powitalny dla nowych użytkowników"
+                />
+                <small class="form-hint">Krótki opis celu kuponu</small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="discount-type">Typ rabatu *</label>
+                <select id="discount-type" name="discount-type" required>
+                  <option value="">Wybierz typ rabatu</option>
+                  <option value="percentage">Procentowy (%)</option>
+                  <option value="fixed">Kwotowy (zł)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="discount-amount">Wartość rabatu *</label>
+                <input
+                  type="number"
+                  id="discount-amount"
+                  name="discount-amount"
+                  placeholder="np. 20"
+                  required
+                  min="0"
+                  step="0.01"
+                />
+                <small class="form-hint" id="discount-hint">Wprowadź wartość rabatu</small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="minimum-amount">Minimalna kwota zamówienia</label>
+                <input
+                  type="number"
+                  id="minimum-amount"
+                  name="minimum-amount"
+                  placeholder="np. 100"
+                  min="0"
+                  step="0.01"
+                />
+                <small class="form-hint">Minimalna kwota zamówienia, aby kupon był ważny</small>
+              </div>
+
+              <div class="form-group">
+                <label for="maximum-amount">Maksymalna kwota rabatu</label>
+                <input
+                  type="number"
+                  id="maximum-amount"
+                  name="maximum-amount"
+                  placeholder="np. 200"
+                  min="0"
+                  step="0.01"
+                />
+                <small class="form-hint">Maksymalna kwota, którą można zaoszczędzić</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ograniczenia użycia -->
+          <div class="form-section">
+            <h3>Ograniczenia użycia</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="usage-limit">Limit użyć</label>
+                <input
+                  type="number"
+                  id="usage-limit"
+                  name="usage-limit"
+                  placeholder="np. 1000"
+                  min="1"
+                />
+                <small class="form-hint">Maksymalna liczba użyć kuponu (puste = bez limitu)</small>
+              </div>
+
+              <div class="form-group">
+                <label for="usage-limit-per-user">Limit użyć na użytkownika</label>
+                <input
+                  type="number"
+                  id="usage-limit-per-user"
+                  name="usage-limit-per-user"
+                  placeholder="np. 1"
+                  min="1"
+                />
+                <small class="form-hint">Maksymalna liczba użyć przez jednego użytkownika</small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="expiry-date">Data wygaśnięcia</label>
+                <input
+                  type="date"
+                  id="expiry-date"
+                  name="expiry-date"
+                />
+                <small class="form-hint">Data, po której kupon przestanie być ważny</small>
+              </div>
+
+              <div class="form-group">
+                <label for="start-date">Data rozpoczęcia</label>
+                <input
+                  type="date"
+                  id="start-date"
+                  name="start-date"
+                />
+                <small class="form-hint">Data, od której kupon będzie aktywny</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ograniczenia produktów -->
+          <div class="form-section">
+            <h3>Ograniczenia produktów</h3>
+
+            <div class="form-group full-width">
+              <label>Zastosowanie rabatu</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="radio" name="apply-to" value="all" checked>
+                  <span>Wszystkie produkty</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="apply-to" value="specific">
+                  <span>Konkretne produkty</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="apply-to" value="categories">
+                  <span>Konkretne kategorie</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width" id="specific-products" style="display: none;">
+              <label for="products">Wybierz produkty</label>
+              <select id="products" name="products[]" multiple>
+                <option value="1">Program: "Poranna praktyka"</option>
+                <option value="2">Program: "Wieczorna relaksacja"</option>
+                <option value="3">Program: "Medytacja dla początkujących"</option>
+                <option value="4">Utwór: "Dźwięki natury"</option>
+                <option value="5">Utwór: "Biały szum"</option>
+              </select>
+              <small class="form-hint">Przytrzymaj Ctrl/Cmd aby wybrać wiele produktów</small>
+            </div>
+
+            <div class="form-group full-width" id="specific-categories" style="display: none;">
+              <label for="categories">Wybierz kategorie</label>
+              <select id="categories" name="categories[]" multiple>
+                <option value="1">Relaksacja</option>
+                <option value="2">Medytacja</option>
+                <option value="3">Sen</option>
+                <option value="4">Koncentracja</option>
+                <option value="5">Motywacja</option>
+                <option value="6">Dobrostan</option>
+              </select>
+              <small class="form-hint">Przytrzymaj Ctrl/Cmd aby wybrać wiele kategorii</small>
+            </div>
+          </div>
+
+          <!-- Ograniczenia użytkowników -->
+          <div class="form-section">
+            <h3>Ograniczenia użytkowników</h3>
+
+            <div class="form-group full-width">
+              <label>Dostępność kuponu</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="radio" name="user-restriction" value="all" checked>
+                  <span>Wszyscy użytkownicy</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="user-restriction" value="specific">
+                  <span>Konkretni użytkownicy</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="user-restriction" value="new">
+                  <span>Tylko nowi użytkownicy</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="user-restriction" value="existing">
+                  <span>Tylko istniejący użytkownicy</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width" id="specific-users" style="display: none;">
+              <label for="users">Wybierz użytkowników</label>
+              <select id="users" name="users[]" multiple>
+                <option value="1">jan.kowalski@example.com</option>
+                <option value="2">anna.nowak@example.com</option>
+                <option value="3">piotr.wisniewski@example.com</option>
+                <option value="4">maria.kowalczyk@example.com</option>
+                <option value="5">tomasz.lewandowski@example.com</option>
+              </select>
+              <small class="form-hint">Przytrzymaj Ctrl/Cmd aby wybrać wielu użytkowników</small>
+            </div>
+          </div>
+
+          <!-- Ustawienia dodatkowe -->
+          <div class="form-section">
+            <h3>Ustawienia dodatkowe</h3>
+
+            <div class="form-group full-width">
+              <label class="toggle-label">
+                <input
+                  type="checkbox"
+                  id="free-shipping"
+                  name="free-shipping"
+                  class="toggle-input"
+                />
+                <span class="toggle-switch"></span>
+                <span class="toggle-text">Darmowa dostawa</span>
+              </label>
+              <small class="form-hint" style="margin-top: 8px; display: block">
+                Kupon zapewnia darmową dostawę (jeśli dotyczy)
+              </small>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="toggle-label">
+                <input
+                  type="checkbox"
+                  id="exclude-sale-items"
+                  name="exclude-sale-items"
+                  class="toggle-input"
+                />
+                <span class="toggle-switch"></span>
+                <span class="toggle-text">Wyklucz produkty w promocji</span>
+              </label>
+              <small class="form-hint" style="margin-top: 8px; display: block">
+                Kupon nie będzie działał na produkty już objęte promocją
+              </small>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="toggle-label">
+                <input
+                  type="checkbox"
+                  id="individual-use"
+                  name="individual-use"
+                  class="toggle-input"
+                />
+                <span class="toggle-switch"></span>
+                <span class="toggle-text">Tylko pojedyncze użycie</span>
+              </label>
+              <small class="form-hint" style="margin-top: 8px; display: block">
+                Kupon nie może być łączony z innymi kuponami
+              </small>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="toggle-label">
+                <input
+                  type="checkbox"
+                  id="coupon-active"
+                  name="coupon-active"
+                  class="toggle-input"
+                  checked
+                />
+                <span class="toggle-switch"></span>
+                <span class="toggle-text">Aktywny</span>
+              </label>
+              <small class="form-hint" style="margin-top: 8px; display: block">
+                Kupon jest aktywny i może być używany
+              </small>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <a href="coupons.html" class="btn-secondary">Anuluj</a>
+            <button type="submit" class="btn-primary">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Zapisz kupon
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="../js/modal.js"></script>
+    <script>
+      // Dynamic form behavior
+      document.addEventListener('DOMContentLoaded', function() {
+        const discountType = document.getElementById('discount-type');
+        const discountAmount = document.getElementById('discount-amount');
+        const discountHint = document.getElementById('discount-hint');
+        const applyToRadios = document.querySelectorAll('input[name="apply-to"]');
+        const userRestrictionRadios = document.querySelectorAll('input[name="user-restriction"]');
+        const specificProducts = document.getElementById('specific-products');
+        const specificCategories = document.getElementById('specific-categories');
+        const specificUsers = document.getElementById('specific-users');
+
+        // Update discount hint based on type
+        function updateDiscountHint() {
+          const type = discountType.value;
+          if (type === 'percentage') {
+            discountHint.textContent = 'Wprowadź procent rabatu (0-100)';
+            discountAmount.max = 100;
+            discountAmount.step = 1;
+          } else if (type === 'fixed') {
+            discountHint.textContent = 'Wprowadź kwotę rabatu w złotych';
+            discountAmount.removeAttribute('max');
+            discountAmount.step = 0.01;
+          }
+        }
+
+        discountType.addEventListener('change', updateDiscountHint);
+        updateDiscountHint();
+
+        // Show/hide specific products section
+        applyToRadios.forEach(radio => {
+          radio.addEventListener('change', function() {
+            if (this.value === 'specific') {
+              specificProducts.style.display = 'block';
+              specificCategories.style.display = 'none';
+            } else if (this.value === 'categories') {
+              specificProducts.style.display = 'none';
+              specificCategories.style.display = 'block';
+            } else {
+              specificProducts.style.display = 'none';
+              specificCategories.style.display = 'none';
+            }
+          });
+        });
+
+        // Show/hide specific users section
+        userRestrictionRadios.forEach(radio => {
+          radio.addEventListener('change', function() {
+            if (this.value === 'specific') {
+              specificUsers.style.display = 'block';
+            } else {
+              specificUsers.style.display = 'none';
+            }
+          });
+        });
+
+        // Form validation
+        const form = document.getElementById('couponForm');
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Basic validation
+          const couponCode = document.getElementById('coupon-code').value;
+          const discountType = document.getElementById('discount-type').value;
+          const discountAmount = document.getElementById('discount-amount').value;
+
+          if (!couponCode || !discountType || !discountAmount) {
+            alert('Proszę wypełnić wszystkie wymagane pola.');
+            return;
+          }
+
+          // Validate discount amount
+          if (discountType === 'percentage' && (discountAmount < 0 || discountAmount > 100)) {
+            alert('Procent rabatu musi być między 0 a 100.');
+            return;
+          }
+
+          if (discountType === 'fixed' && discountAmount < 0) {
+            alert('Kwota rabatu nie może być ujemna.');
+            return;
+          }
+
+          // Validate dates
+          const startDate = document.getElementById('start-date').value;
+          const expiryDate = document.getElementById('expiry-date').value;
+
+          if (startDate && expiryDate && new Date(startDate) >= new Date(expiryDate)) {
+            alert('Data rozpoczęcia musi być wcześniejsza niż data wygaśnięcia.');
+            return;
+          }
+
+          // If validation passes, submit the form
+          alert('Kupon został zapisany pomyślnie!');
+          // Here you would normally submit the form to the server
+          // window.location.href = 'coupons.html';
+        });
+
+        // Auto-generate coupon code suggestion
+        const couponCodeInput = document.getElementById('coupon-code');
+        const descriptionInput = document.getElementById('coupon-description');
+        
+        descriptionInput.addEventListener('input', function() {
+          if (!couponCodeInput.value) {
+            const suggestion = this.value
+              .toUpperCase()
+              .replace(/[^A-Z0-9\s]/g, '')
+              .replace(/\s+/g, '')
+              .substring(0, 10);
+            if (suggestion) {
+              couponCodeInput.placeholder = `np. ${suggestion}`;
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
